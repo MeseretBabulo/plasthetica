@@ -1,446 +1,274 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
-    />
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-  </head>
-  <style>
-    .avatar-carousel {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      width: 100%;
-      max-width: 1100px;
-      margin: auto;
-    }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./tailwindcss" />
 
-    .avatarSwiper {
-      width: 100%;
-    }
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+</head>
+<style>
+  .avatar-carousel {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+  }
 
-    .swiper-slide {
-      width: auto;
-      text-align: center;
-    }
+  .avatarSwiper {
+    width: 100%;
+  }
 
-    .avatar {
-      width: 88px;
-      height: 88px;
-      border-radius: 50%;
-      padding: 3px;
-      transition: border 0.3s;
-    }
+  .swiper-slide {
+    width: auto;
+    text-align: center;
+  }
 
-    .avatar img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-    }
+  .avatar {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    padding: 3px;
+    transition: border 0.3s;
+  }
 
-    /* Active slide ring */
-    .swiper-slide-active .avatar {
-      border: 2px solid #000;
-    }
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 
-    .swiper-slide span {
-      display: block;
-      margin-top: 6px;
-      font-size: 14px;
-      color: #000;
-    }
+  /* Active slide ring */
+  .swiper-slide-active .avatar {
+    border: 2px solid #000;
+  }
 
-    /* Arrows */
-    .nav-btn {
-      background: none;
-      border: none;
-      font-size: 26px;
-      cursor: pointer;
-      color: #000;
-    }
+  .swiper-slide span {
+    display: block;
+    margin-top: 6px;
+    font-size: 14px;
+    color: #000;
+  }
 
-    /* Custom styles to ensure smooth max-height transition in older browsers */
-    .content-transition {
-      transition: max-height 0.3s ease-in-out;
-    }
+  /* Arrows */
+  .nav-btn {
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: #000;
+  }
 
-    /* Hide the default radio/checkbox input visually but keep functionality */
-    .form-radio,
-    .form-checkbox {
-      /* Use standard browser styles for simplicity in this example */
-      /* For the exact circle/square look, consider a Tailwind plugin or custom appearance */
-    }
-  </style>
-  <body>
-    <div class="bg-white">
-      <!-- Doctor Profile -->
-      <div class="w-full bg-[#F7F2EF] min-h-111.25 p-4 lg:px-50.25">
-        <div class="flex flex-row justify-end gap-x-4 mb-4 lg:mb-10">
-          <a href="">
-            <img
-              src="./assets/icons/share.svg"
-              alt="Share icon"
-              class="w-5 h-5"
-            />
-          </a>
-          <a href="">
-            <img
-              src="./assets/icons/heart.svg"
-              alt="Heart icon"
-              class="w-5 h-5"
-            />
-          </a>
-        </div>
+  /* Custom styles to ensure smooth max-height transition in older browsers */
+  .content-transition {
+    transition: max-height 0.3s ease-in-out;
+  }
 
-        <div class="flex flex-col lg:flex-row lg:justify-between">
-          <div class="flex flex-col lg:flex-row lg:gap-x-6">
-            <div class="w-full lg:w-50.25 h-auto">
-              <img src=./assets/images/doctor-profile.png class="w-full h-full
-              object-cover rounded-tl-[30%] rounded-br-[30%]" alt="Doctor image"
-              />
-            </div>
+  /* Hide the default radio/checkbox input visually but keep functionality */
+  .form-radio,
+  .form-checkbox {
+    /* Use standard browser styles for simplicity in this example */
+    /* For the exact circle/square look, consider a Tailwind plugin or custom appearance */
+  }
+</style>
 
-            <div>
-              <div class="w-full text-center mt-4 lg:text-start">
-                <h2 class="text-[#3E3735] text-4xl font-bold">Dr. Meseret</h2>
-              </div>
-
-              <div class="flex flex-col mt-6 gap-y-2.5">
-                <div class="flex flex-row items-center">
-                  <img
-                    src="./assets/icons/location.svg"
-                    alt="Location icon"
-                    class="w-7 h-7 mt-1 mr-2"
-                  />
-                  <span
-                    class="text-[#3E3735] text-[14px] font-semibold leading-5"
-                  >
-                    Virginia, USA |
-                  </span>
-                </div>
-                <div class="flex flex-row items-center">
-                  <img
-                    src="./assets/icons/globe.svg"
-                    alt="Globe icon"
-                    class="w-7 h-7 mt-1 mr-2"
-                  />
-                  <p class="text-[#3E3735] text-[14px] font-semibold leading-5">
-                    +1 234 567 890
-                  </p>
-                </div>
-                <div class="flex flex-row items-center">
-                  <img
-                    src="./assets/icons/globe.svg"
-                    alt="Globe icon"
-                    class="w-7 h-7 mt-1 mr-2"
-                  />
-                  <p class="text-[#3E3735] text-[14px] font-semibold leading-5">
-                    25 patients today
-                  </p>
-                </div>
-                <div class="flex flex-row items-center">
-                  <img
-                    src="./assets/icons/star-bold.svg"
-                    alt="Star-Bold
-                  icon"
-                    class="w-7 h-7 mt-1 mr-2"
-                  />
-                  <p class="text-[#3E3735] text-[14px] font-semibold leading-5">
-                    4.5 | 200 Reviews | Cardiology
-                  </p>
-                </div>
-                <div class="flex flex-row items-center">
-                  <img
-                    src="./assets/icons/message.svg"
-                    alt="Message icon"
-                    class="w-7 h-7 mt-1 mr-2"
-                  />
-                  <p class="text-[#3E3735] text-[14px] font-semibold leading-5">
-                    Message | Book Appointment | Reviews
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="hidden text-black lg:flex lg:gap-x-4">
-            <button
-              class="bg-[#3E3735] rounded-2xl w-fit h-fit flex items-center justify-center px-4 py-2 text-white"
-            >
-              Book now
-            </button>
-            <button
-              class="bg-gray-500 rounded-full w-10 h-10 flex items-center justify-center"
-            >
-              Bo
-            </button>
-          </div>
-        </div>
+<body>
+  <div class="bg-white w-full max-w-415! mx-auto">
+    <!-- Doctor Profile -->
+    <div class="w-full bg-[#F7F2EF] min-h-111.25 p-4 lg:px-50.25">
+      <div class="flex flex-row justify-end gap-x-4 mb-4 lg:mb-10">
+        <a href="">
+          <img src="./assets/icons/share.svg" alt="Share icon" class="w-5 h-5" />
+        </a>
+        <a href="">
+          <img src="./assets/icons/heart.svg" alt="Heart icon" class="w-5 h-5" />
+        </a>
       </div>
 
-      <div class="my-10 px-4 lg:px-50.25!">
-        <!-- Carousel Image -->
-        <div class="avatar-carousel">
-          <button class="nav-btn prev">‹</button>
+      <div class="flex flex-col lg:flex-row lg:justify-between">
+        <div class="flex flex-col lg:flex-row lg:gap-x-6">
+          <div class="w-full lg:w-50.25 h-auto">
+            <img src=./assets/images/doctor-profile.png class="w-full h-full
+              object-cover rounded-tl-[30%] rounded-br-[30%]" alt="Doctor image" />
+          </div>
 
-          <div class="swiper avatarSwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="avatar">
-                  <img src="https://picsum.photos/200?1" />
-                </div>
-                <span>עיניים</span>
-              </div>
+          <div>
+            <div class="w-full text-center mt-4 lg:text-start">
+              <h2 class="text-[#3E3735] text-4xl font-bold">Dr. Meseret</h2>
+            </div>
 
-              <div class="swiper-slide">
-                <div class="avatar">
-                  <img src="https://picsum.photos/200?2" />
-                </div>
-                <span>עיניים</span>
+            <div class="flex flex-col mt-6 gap-y-2.5">
+              <div class="flex flex-row items-center">
+                <img src="./assets/icons/location.svg" alt="Location icon" class="w-7 h-7 mt-1 mr-2" />
+                <span class="text-[#3E3735] text-[14px] font-semibold leading-5">
+                  Virginia, USA |
+                </span>
               </div>
-
-              <div class="swiper-slide">
-                <div class="avatar">
-                  <img src="https://picsum.photos/200?3" />
-                </div>
-                <span>עיניים</span>
+              <div class="flex flex-row items-center">
+                <img src="./assets/icons/globe.svg" alt="Globe icon" class="w-7 h-7 mt-1 mr-2" />
+                <p class="text-[#3E3735] text-[14px] font-semibold leading-5">
+                  +1 234 567 890
+                </p>
               </div>
-
-              <div class="swiper-slide">
-                <div class="avatar">
-                  <img src="https://picsum.photos/200?4" />
-                </div>
-                <span>עיניים</span>
+              <div class="flex flex-row items-center">
+                <img src="./assets/icons/globe.svg" alt="Globe icon" class="w-7 h-7 mt-1 mr-2" />
+                <p class="text-[#3E3735] text-[14px] font-semibold leading-5">
+                  25 patients today
+                </p>
               </div>
-
-              <div class="swiper-slide">
-                <div class="avatar">
-                  <img src="https://picsum.photos/200?5" />
-                </div>
-                <span>עיניים</span>
+              <div class="flex flex-row items-center">
+                <img src="./assets/icons/star-bold.svg" alt="Star-Bold
+                  icon" class="w-7 h-7 mt-1 mr-2" />
+                <p class="text-[#3E3735] text-[14px] font-semibold leading-5">
+                  4.5 | 200 Reviews | Cardiology
+                </p>
               </div>
-              <div class="swiper-slide">
-                <div class="avatar">
-                  <img src="https://picsum.photos/200?1" />
-                </div>
-                <span>עיניים</span>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="avatar">
-                  <img src="https://picsum.photos/200?2" />
-                </div>
-                <span>עיניים</span>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="avatar">
-                  <img src="https://picsum.photos/200?3" />
-                </div>
-                <span>עיניים</span>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="avatar">
-                  <img src="https://picsum.photos/200?4" />
-                </div>
-                <span>עיניים</span>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="avatar">
-                  <img src="https://picsum.photos/200?5" />
-                </div>
-                <span>עיניים</span>
-              </div>
-              <div class="swiper-slide">
-                <div class="avatar">
-                  <img src="https://picsum.photos/200?1" />
-                </div>
-                <span>עיניים</span>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="avatar">
-                  <img src="https://picsum.photos/200?2" />
-                </div>
-                <span>עיניים</span>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="avatar">
-                  <img src="https://picsum.photos/200?3" />
-                </div>
-                <span>עיניים</span>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="avatar">
-                  <img src="https://picsum.photos/200?4" />
-                </div>
-                <span>עיניים</span>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="avatar">
-                  <img src="https://picsum.photos/200?5" />
-                </div>
-                <span>עיניים</span>
+              <div class="flex flex-row items-center">
+                <img src="./assets/icons/message.svg" alt="Message icon" class="w-7 h-7 mt-1 mr-2" />
+                <p class="text-[#3E3735] text-[14px] font-semibold leading-5">
+                  Message | Book Appointment | Reviews
+                </p>
               </div>
             </div>
           </div>
-
-          <button class="nav-btn next">›</button>
         </div>
 
-        <!-- Filter Items -->
-        <div
-          class="w-full flex flex-col pt-9! lg:flex-row lg:justify-between! lg:gap-x-10!"
-        >
-          <div class="w-full lg:w-3/4!">
-            <div class="flex justify-between">
-              <h4 class="flex flex-row justify-between text-[22px] gap-x-4">
-                <span class="text-[#3E3735] font-semibold!">עיינים </span>
-                <span> result 34</span>
-              </h4>
-              <img
-                src="./assets//icons/filter.svg"
-                alt="Filter icon"
-                class="w-5 h-5 lg:hidden"
-              />
+        <div class="hidden text-black lg:flex lg:gap-x-4">
+          <button class="bg-[#3E3735] rounded-2xl w-fit h-fit flex items-center justify-center px-4 py-2 text-white">
+            Book now
+          </button>
+          <button class="bg-gray-500 rounded-full w-10 h-10 flex items-center justify-center">
+            Bo
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-10 px-4 lg:px-50.25!">
+      <!-- Carousel Image -->
+      <div class="avatar-carousel">
+        <button class="nav-btn prev">‹</button>
+
+        <div class="swiper avatarSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="avatar">
+                <img src="https://picsum.photos/200?1" />
+              </div>
+              <span>botox</span>
             </div>
-            <div class="hidden lg:flex lg:flex-wrap lg:gap-x-2! lg:mt-2">
-              <div class="flex flex-row justify-between bg-[#E4CFC6]! px-3! py-1! rounded-3xl w-fit gap-x-2">
-                  <span>Item</span>
-                <span>x</span>
+
+            <div class="swiper-slide">
+              <div class="avatar">
+                <img src="https://picsum.photos/200?2" />
               </div>
-                   <div class="flex flex-row justify-between bg-[#E4CFC6]! px-3! py-1! rounded-3xl w-fit gap-x-2">
-                  <span>Item</span>
-                <span>x</span>
-              </div>
-                   <div class="flex flex-row justify-between bg-[#E4CFC6]! px-3! py-1! rounded-3xl w-fit gap-x-2">
-                  <span>Item</span>
-                <span>x</span>
-              </div>
-                   <div class="flex flex-row justify-between bg-[#E4CFC6]! px-3! py-1! rounded-3xl w-fit gap-x-2">
-                  <span>Item</span>
-                <span>x</span>
-              </div>
-                   <div class="flex flex-row justify-between bg-[#E4CFC6]! px-3! py-1! rounded-3xl w-fit gap-x-2">
-                  <span>Item</span>
-                <span>x</span>
-              </div>
+              <span>botox</span>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-4">
-              <div class="bg-white p-4 mt-4 shadow-lg rounded-lg">
-                <div class="flex flex-row justify-between gap-x-4">
-                  <img
-                    src="./assets/images/doctor-profile.png"
-                    class="w-1/2! h-33!"
-                  />
-                  <img
-                    src="./assets/images/doctor-profile.png"
-                    class="w-1/2! h-33!"
-                  />
-                </div>
-                <div class="mt-3">
-                  <h5 class="font-semibold text-[22px]!">בוטוקס</h5>
-                  <p>
-                    הצערת פנים עם בוטוקס וחומצה היאלורונית - תוצאות נראות לעין
-                    לאחר שבועיים
-                  </p>
-                  <div class="flex flex-row gap-x-4">
-                    <span class="font-bold">מין: אישה</span>
-                    <span>|</span>
-                    <span>30 mins</span>
-                  </div>
-                </div>
+
+            <div class="swiper-slide">
+              <div class="avatar">
+                <img src="https://picsum.photos/200?3" />
               </div>
-              <div class="bg-white p-4 mt-4 shadow-lg rounded-lg">
-                <div class="flex flex-row justify-between gap-x-4">
-                  <img
-                    src="./assets/images/doctor-profile.png"
-                    class="w-1/2! h-33!"
-                  />
-                  <img
-                    src="./assets/images/doctor-profile.png"
-                    class="w-1/2! h-33!"
-                  />
-                </div>
-                <div class="mt-3">
-                  <h5 class="font-semibold text-[22px]!">בוטוקס</h5>
-                  <p>
-                    הצערת פנים עם בוטוקס וחומצה היאלורונית - תוצאות נראות לעין
-                    לאחר שבועיים
-                  </p>
-                  <div class="flex flex-row gap-x-4">
-                    <span class="font-bold">מין: אישה</span>
-                    <span>|</span>
-                    <span>30 mins</span>
-                  </div>
-                </div>
+              <span>botox</span>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="avatar">
+                <img src="https://picsum.photos/200?4" />
               </div>
-              <div class="bg-white p-4 mt-4 shadow-lg rounded-lg">
-                <div class="flex flex-row justify-between gap-x-4">
-                  <img
-                    src="./assets/images/doctor-profile.png"
-                    class="w-1/2! h-33!"
-                  />
-                  <img
-                    src="./assets/images/doctor-profile.png"
-                    class="w-1/2! h-33!"
-                  />
-                </div>
-                <div class="mt-3">
-                  <h5 class="font-semibold text-[22px]!">בוטוקס</h5>
-                  <p>
-                    הצערת פנים עם בוטוקס וחומצה היאלורונית - תוצאות נראות לעין
-                    לאחר שבועיים
-                  </p>
-                  <div class="flex flex-row gap-x-4">
-                    <span class="font-bold">מין: אישה</span>
-                    <span>|</span>
-                    <span>30 mins</span>
-                  </div>
-                </div>
+              <span>botox</span>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="avatar">
+                <img src="https://picsum.photos/200?5" />
               </div>
-              <div class="bg-white p-4 mt-4! shadow-lg! rounded-lg">
-                <div class="flex flex-row justify-between gap-x-4!">
-                  <img
-                    src="./assets/images/doctor-profile.png"
-                    class="w-1/2! h-33!"
-                  />
-                  <img
-                    src="./assets/images/doctor-profile.png"
-                    class="w-1/2! h-33!"
-                  />
-                </div>
-                <div class="mt-3">
-                  <h5 class="font-semibold text-[22px]!">בוטוקס</h5>
-                  <p>
-                    הצערת פנים עם בוטוקס וחומצה היאלורונית - תוצאות נראות לעין
-                    לאחר שבועיים
-                  </p>
-                  <div class="flex flex-row gap-x-4">
-                    <span class="font-bold">מין: אישה</span>
-                    <span>|</span>
-                    <span>30 mins</span>
-                  </div>
-                </div>
+              <span>botox</span>
+            </div>
+            <div class="swiper-slide">
+              <div class="avatar">
+                <img src="https://picsum.photos/200?1" />
               </div>
+              <span>botox</span>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="avatar">
+                <img src="https://picsum.photos/200?2" />
+              </div>
+              <span>botox</span>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="avatar">
+                <img src="https://picsum.photos/200?3" />
+              </div>
+              <span>botox</span>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="avatar">
+                <img src="https://picsum.photos/200?4" />
+              </div>
+              <span>botox</span>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="avatar">
+                <img src="https://picsum.photos/200?5" />
+              </div>
+              <span>botox</span>
+            </div>
+            <div class="swiper-slide">
+              <div class="avatar">
+                <img src="https://picsum.photos/200?1" />
+              </div>
+              <span>botox</span>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="avatar">
+                <img src="https://picsum.photos/200?2" />
+              </div>
+              <span>botox</span>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="avatar">
+                <img src="https://picsum.photos/200?3" />
+              </div>
+              <span>botox</span>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="avatar">
+                <img src="https://picsum.photos/200?4" />
+              </div>
+              <span>botox</span>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="avatar">
+                <img src="https://picsum.photos/200?5" />
+              </div>
+              <span>botox</span>
             </div>
           </div>
-          <div
-            class="hidden border-none! border-[#E4CFC6]! rounded-lg lg:flex lg:w-1/4!"
-          >
-            <!-- <div class="w-full mx-auto space-y-2">
+        </div>
+
+        <button class="nav-btn next">›</button>
+      </div>
+
+      <!-- Filter Items -->
+      <div class="w-full flex flex-col pt-9! lg:flex-row lg:justify-between! lg:gap-x-10!">
+        <div class="hidden border-none! border-[#E4CFC6]! rounded-lg lg:flex lg:w-1/4! lg:h-fit!">
+          <!-- <div class="w-full mx-auto space-y-2">
               <details class="group rounded-lg p-4 w-full">
                 <summary
                   class="flex cursor-pointer items-center justify-between font-medium w-full"
@@ -468,268 +296,431 @@
               </details>
                   <hr class="border! border-[#E4CFC6]! my-4" />
             </div> -->
-            <div
-              class="w-full max-w-xs bg-white rounded-lg shadow-xl border border-[#E4CFC6]! overflow-hidden mx-auto"
-            >
-              <div class="border-b border-[#E4CFC6]!">
-                <div
-                  id="sort-header"
-                  class="p-4 flex justify-between items-center cursor-pointer hover:bg-[#E4CFC6]! group"
-                >
-                  <h3 class="text-sm font-bold text-gray-700">מיון לפי</h3>
-                  <svg
-                    class="w-4 h-4 transition-transform duration-300 transform rotate-0"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    ></path>
-                  </svg>
-                </div>
-
-                <div
-                  id="sort-content"
-                  class="content-transition p-0 space-y-2 border-t border-[#E4CFC6]! max-h-0 overflow-hidden"
-                >
-                  <div class="p-4 pt-0">
-                    <label
-                      class="flex items-center justify-end text-sm text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded"
-                    >
-                      מהישן לחדש
-                      <input
-                        type="radio"
-                        name="sort"
-                        class="form-radio h-4 w-4 border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2"
-                        checked
-                      />
-                    </label>
-                    <label
-                      class="flex items-center justify-end text-sm text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded"
-                    >
-                      מהחדש לישן
-                      <input
-                        type="radio"
-                        name="sort"
-                        class="form-radio h-4 w-4 border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2"
-                      />
-                    </label>
-                  </div>
-                </div>
+          <div class="w-full max-w-xs bg-white rounded-lg shadow-xl border border-[#E4CFC6]! overflow-hidden mx-auto">
+            <div class="border-b border-[#E4CFC6]!">
+              <div id="sort-header"
+                class="p-4 flex justify-between items-center cursor-pointer hover:bg-[#E4CFC6]! group">
+                <h3 class="text-sm font-bold text-gray-700">Sort by</h3>
+                <svg class="w-4 h-4 transition-transform duration-300 transform rotate-0" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
               </div>
 
-              <div class="border-b border-[#E4CFC6]!">
-                <div
-                  id="treatment-header"
-                  class="p-4 flex justify-between items-center cursor-pointer hover:bg-[#E4CFC6]! group"
-                >
-                  <h3 class="text-sm font-bold text-gray-700">שם טיפול</h3>
-                  <svg
-                    class="w-4 h-4 transition-transform duration-300 transform rotate-180"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    ></path>
-                  </svg>
-                </div>
-
-                <div
-                  id="treatment-content"
-                  class="content-transition p-4 border-t border-[#E4CFC6]! max-h-screen overflow-hidden"
-                >
-                  <div class="relative mb-4">
-                    <input
-                      type="text"
-                      placeholder="טקסט"
-                      class="w-full py-2 pl-3 pr-10 text-sm border border-[#E4CFC6]! rounded-lg focus:ring-[#E4CFC6]! focus:border-purple-500"
-                    />
-                    <svg
-                      class="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                      ></path>
-                    </svg>
-                  </div>
-
-                  <div class="space-y-2 text-right">
-                    <label
-                      class="flex items-center justify-end text-sm text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded"
-                    >
-                      בחר הכל
-                      <input
-                        type="checkbox"
-                        class="form-checkbox h-4 w-4 rounded border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2"
-                      />
-                    </label>
-                    <label
-                      class="flex items-center justify-end text-sm text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded"
-                    >
-                      בוטוקס (35)
-                      <input
-                        type="checkbox"
-                        class="form-checkbox h-4 w-4 rounded border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2"
-                      />
-                    </label>
-                  </div>
+              <div id="sort-content"
+                class="content-transition p-0 space-y-2 border-t border-[#E4CFC6]! max-h-0 overflow-hidden">
+                <div class="p-4 pt-0">
+                  <label
+                    class="flex items-center justify-end text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+                    Most recent
+                    <input type="radio" name="sort"
+                      class="form-radio h-4 w-4 border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" checked />
+                  </label>
+                  <label
+                    class="flex items-center justify-end text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+                    Most old
+                    <input type="radio" name="sort"
+                      class="form-radio h-4 w-4 border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" />
+                  </label>
                 </div>
               </div>
+            </div>
 
-              <div class="border-b border-[#E4CFC6]!">
-                <div
-                  id="type-header"
-                  class="p-4 flex justify-between items-center cursor-pointer hover:bg-[#E4CFC6]! group"
-                >
-                  <h3 class="text-sm font-bold text-gray-700">סוג</h3>
-                  <svg
-                    class="w-4 h-4 transition-transform duration-300 transform rotate-0"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    ></path>
-                  </svg>
-                </div>
-                <div
-                  id="type-content"
-                  class="content-transition p-0 border-t border-[#E4CFC6]! max-h-0 overflow-hidden"
-                >
-                  <div class="p-4 pt-0">
-                    <p class="text-sm text-gray-500">תוכן הסוג...</p>
-                  </div>
-                </div>
+            <div class="border-b border-[#E4CFC6]!">
+              <div id="treatment-header"
+                class="p-4 flex justify-between items-center cursor-pointer hover:bg-[#E4CFC6]! group">
+                <h3 class="text-sm font-bold text-gray-700">Procedure name</h3>
+                <svg class="w-4 h-4 transition-transform duration-300 transform rotate-180" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
               </div>
 
-              <div class="border-b border-[#E4CFC6]!">
-                <div
-                  id="price-header"
-                  class="p-4 flex justify-between items-center cursor-pointer hover:bg-[#E4CFC6]! group"
-                >
-                  <h3 class="text-sm font-bold text-gray-700">מחיר</h3>
-                  <svg
-                    class="w-4 h-4 transition-transform duration-300 transform rotate-180"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    ></path>
+              <div id="treatment-content"
+                class="content-transition p-4 border-t border-[#E4CFC6]! max-h-screen overflow-hidden">
+                <div class="relative mb-4">
+                  <input type="text" placeholder="טקסט"
+                    class="w-full py-2 pl-3 pr-10 text-sm border border-[#E4CFC6]! rounded-lg focus:ring-[#E4CFC6]! focus:border-purple-500" />
+                  <svg class="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                   </svg>
                 </div>
 
-                <div
-                  id="price-content"
-                  class="content-transition p-4 border-t border-[#E4CFC6]! max-h-screen overflow-hidden"
-                >
-                  <div class="relative pt-2 pb-6">
-                    <div class="h-1 bg-gray-100 rounded-full">
-                      <div
-                        class="absolute top-2 h-1 bg-[#E4CFC6]! rounded-full"
-                        style="left: 20%; right: 40%"
-                      ></div>
-                    </div>
+                <div class="space-y-2 text-right">
+                  <label
+                    class="flex items-center justify-end text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+                    Botox
+                    <input type="checkbox"
+                      class="form-checkbox h-4 w-4 rounded border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" />
+                  </label>
+                  <label
+                    class="flex items-center justify-end text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+                    Mesotherapy (35)
+                    <input type="checkbox"
+                      class="form-checkbox h-4 w-4 rounded border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" />
+                  </label>
+                  <label
+                    class="flex items-center justify-end text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+                    Skin Booster (35)
+                    <input type="checkbox"
+                      class="form-checkbox h-4 w-4 rounded border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" />
+                  </label>
+                  <label
+                    class="flex items-center justify-end text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+                    Hair Removal (35)
+                    <input type="checkbox"
+                      class="form-checkbox h-4 w-4 rounded border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" />
+                  </label>
+                  <label
+                    class="flex items-center justify-end text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+                    Ultherapy (35)
+                    <input type="checkbox"
+                      class="form-checkbox h-4 w-4 rounded border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" />
+                  </label>
+                  <label
+                    class="flex items-center justify-end text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+                    Hify (35)
+                    <input type="checkbox"
+                      class="form-checkbox h-4 w-4 rounded border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" />
+                  </label>
+                </div>
+              </div>
+            </div>
 
-                    <div
-                      class="flex justify-between text-xs text-gray-500 mt-4 text-right rtl"
-                    >
-                      <span>+10,000</span>
-                      <span>500</span>
-                      <span>200</span>
-                      <span>0</span>
-                    </div>
+            <div class="border-b border-[#E4CFC6]!">
+              <div id="type-header"
+                class="p-4 flex justify-between items-center cursor-pointer hover:bg-[#E4CFC6]! group">
+                <h3 class="text-sm font-bold text-gray-700">Procedure types</h3>
+                <svg class="w-4 h-4 transition-transform duration-300 transform rotate-0" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+              <div id="type-content" class="content-transition p-0 border-t border-[#E4CFC6]! max-h-0 overflow-hidden">
+                <div class="p-4 pt-0">
+                  <p class="text-sm text-gray-500">Procedure type...</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="border-b border-[#E4CFC6]!">
+              <div id="price-header"
+                class="p-4 flex justify-between items-center cursor-pointer hover:bg-[#E4CFC6]! group">
+                <h3 class="text-sm font-bold text-gray-700">מחיר</h3>
+                <svg class="w-4 h-4 transition-transform duration-300 transform rotate-180" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+
+              <div id="price-content"
+                class="content-transition p-4 border-t border-[#E4CFC6]! max-h-screen overflow-hidden">
+                <div class="flex flex-col items-center p-0 space-y-6 w-full max-w-md rounded-xl">
+
+                  <div class="relative w-full h-10 flex items-center">
+                    <div class="absolute w-full h-1.5 bg-gray-200 rounded-full "></div>
+
+                    <div id="slider-track" class="absolute h-1.5 bg-[#E4CFC6]! rounded-full"
+                      style="left: 0%; right: 0%;"></div>
+
+                    <span id="min-bubble"
+                      class="absolute -top-7 text-xs bg-[#E4CFC6]! text-[#3E3735] px-2 py-0.5 m-5 rounded shadow whitespace-nowrap transform -translate-x-1/2 select-none">
+                      <span><span id="min-val"></span></span>
+                    </span>
+                    <span id="max-bubble"
+                      class="absolute -top-7 text-xs bg-[#E4CFC6]! text-[#3E3735] px-2 py-0.5 mt-5 -ml-5 rounded shadow whitespace-nowrap transform -translate-x-1/2 select-none">
+                      <span><span id="max-val"></span></span>
+                    </span>
+
+                    <input type="range" id="min-slider" min="25" max="10000" value="25" step="1"
+                      class="absolute w-full appearance-none bg-transparent pointer-events-none cursor-pointer focus:outline-none z-20
+        [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-gray-100 [&::-webkit-slider-thumb]:rounded-full" />
+
+                    <input type="range" id="max-slider" min="25" max="10000" value="10000" step="1"
+                      class="absolute w-full appearance-none bg-transparent pointer-events-none cursor-pointer focus:outline-none z-30
+        [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-gray-100 [&::-webkit-slider-thumb]:rounded-full" />
+                  </div>
+
+                  <!-- Ticks -->
+                  <div class="flex justify-between w-full text-xs text-gray-600">
+                    <span>$25</span>
+                    <span>$2000</span>
+                    <span>$5000</span>
+                    <span>$10,000</span>
+                  </div>
+
+                  <!-- Selected range display -->
+                  <div class="flex justify-between w-full text-sm font-medium text-gray-600">
+                    <!-- <span><span id="min-val"></span></span>
+                    <span><span id="max-val"></span></span> -->
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="w-full lg:w-3/4!">
+          <div class="flex justify-between">
+            <h4 class="flex flex-row justify-between text-[22px] gap-x-4">
+              <span class="text-[#3E3735] font-semibold!">Face</span>
+              <span> result 34</span>
+            </h4>
+            <img src="./assets//icons/filter.svg" alt="Filter icon" class="w-5 h-5 lg:hidden" />
+          </div>
+          <div class="flex justify-between!">
+            <div class="hidden lg:flex lg:flex-wrap lg:gap-x-2! lg:mt-2">
+              <div class="flex flex-row justify-between bg-[#E4CFC6]! px-3! py-1! rounded-3xl w-fit gap-x-2">
+                <span>Item</span>
+                <span>x</span>
+              </div>
+              <div class="flex flex-row justify-between bg-[#E4CFC6]! px-3! py-1! rounded-3xl w-fit gap-x-2">
+                <span>Item</span>
+                <span>x</span>
+              </div>
+              <div class="flex flex-row justify-between bg-[#E4CFC6]! px-3! py-1! rounded-3xl w-fit gap-x-2">
+                <span>Item</span>
+                <span>x</span>
+              </div>
+              <div class="flex flex-row justify-between bg-[#E4CFC6]! px-3! py-1! rounded-3xl w-fit gap-x-2">
+                <span>Item</span>
+                <span>x</span>
+              </div>
+              <div class="flex flex-row justify-between bg-[#E4CFC6]! px-3! py-1! rounded-3xl w-fit gap-x-2">
+                <span>Item</span>
+                <span>x</span>
+              </div>
+            </div>
+
+            <div>
+              <a href="" class="flex flex-row justify-between items-center gap-x-3 type=" button">
+                <span class="underline">Clear All</span>
+                <span class="text-sm">x</span>
+              </a>
+            </div>
+
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-4">
+            <div class="bg-white p-4 mt-4 shadow-lg rounded-lg">
+              <div class="flex flex-row justify-between gap-x-4">
+                <img src="./assets/images/doctor-profile.png" class="w-1/2! h-33!" />
+                <img src="./assets/images/doctor-profile.png" class="w-1/2! h-33!" />
+              </div>
+              <div class="flex flex-col mt-3 gap-y-1">
+                <h5 class="font-semibold text-[22px]!">Skin Booster</h5>
+                <p>
+                  Women treated skin booster injection for face wrinke
+                </p>
+                <p class="text-[#524B46] text-[14px]!">30/10/2023</p>
+                <div class="flex flex-row gap-x-4">
+                  <span class="font-bold">30/10/2023</span>
+                  <span>|</span>
+                  <span>30 mins</span>
+                </div>
+              </div>
+            </div>
+                        <div class="bg-white p-4 mt-4 shadow-lg rounded-lg">
+              <div class="flex flex-row justify-between gap-x-4">
+                <img src="./assets/images/doctor-profile.png" class="w-1/2! h-33!" />
+                <img src="./assets/images/doctor-profile.png" class="w-1/2! h-33!" />
+              </div>
+              <div class="flex flex-col mt-3 gap-y-1">
+                <h5 class="font-semibold text-[22px]!">Skin Booster</h5>
+                <p>
+                  Women treated skin booster injection for face wrinke
+                </p>
+                <p class="text-[#524B46] text-[14px]!">30/10/2023</p>
+                <div class="flex flex-row gap-x-4">
+                  <span class="font-bold">30/10/2023</span>
+                  <span>|</span>
+                  <span>30 mins</span>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white p-4 mt-4 shadow-lg rounded-lg">
+              <div class="flex flex-row justify-between gap-x-4">
+                <img src="./assets/images/doctor-profile.png" class="w-1/2! h-33!" />
+                <img src="./assets/images/doctor-profile.png" class="w-1/2! h-33!" />
+              </div>
+              <div class="flex flex-col mt-3 gap-y-1">
+                <h5 class="font-semibold text-[22px]!">Skin Booster</h5>
+                <p>
+                  Women treated skin booster injection for face wrinke
+                </p>
+                <p class="text-[#524B46] text-[14px]!">30/10/2023</p>
+                <div class="flex flex-row gap-x-4">
+                  <span class="font-bold">30/10/2023</span>
+                  <span>|</span>
+                  <span>30 mins</span>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white p-4 mt-4 shadow-lg rounded-lg">
+              <div class="flex flex-row justify-between gap-x-4">
+                <img src="./assets/images/doctor-profile.png" class="w-1/2! h-33!" />
+                <img src="./assets/images/doctor-profile.png" class="w-1/2! h-33!" />
+              </div>
+              <div class="flex flex-col mt-3 gap-y-1">
+                <h5 class="font-semibold text-[22px]!">Skin Booster</h5>
+                <p>
+                  Women treated skin booster injection for face wrinke
+                </p>
+                <p class="text-[#524B46] text-[14px]!">30/10/2023</p>
+                <div class="flex flex-row gap-x-4">
+                  <span class="font-bold">30/10/2023</span>
+                  <span>|</span>
+                  <span>30 mins</span>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white p-4 mt-4 shadow-lg rounded-lg">
+              <div class="flex flex-row justify-between gap-x-4">
+                <img src="./assets/images/doctor-profile.png" class="w-1/2! h-33!" />
+                <img src="./assets/images/doctor-profile.png" class="w-1/2! h-33!" />
+              </div>
+              <div class="flex flex-col mt-3 gap-y-1">
+                <h5 class="font-semibold text-[22px]!">Skin Booster</h5>
+                <p>
+                  Women treated skin booster injection for face wrinke
+                </p>
+                <p class="text-[#524B46] text-[14px]!">30/10/2023</p>
+                <div class="flex flex-row gap-x-4">
+                  <span class="font-bold">30/10/2023</span>
+                  <span>|</span>
+                  <span>30 mins</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
+  </div>
 
-    <script>
-      new Swiper(".avatarSwiper", {
-        slidesPerView: "auto",
-        spaceBetween: 18,
-        navigation: {
-          nextEl: ".next",
-          prevEl: ".prev",
-        },
-        freeMode: true,
-        centeredSlides: false,
-      });
+  <script>
+    new Swiper(".avatarSwiper", {
+      slidesPerView: "auto",
+      spaceBetween: 18,
+      navigation: {
+        nextEl: ".next",
+        prevEl: ".prev",
+      },
+      freeMode: true,
+      centeredSlides: false,
+    });
+document.addEventListener("DOMContentLoaded", function () {
+  const headers = document.querySelectorAll('[id$="-header"]');
 
-      document.addEventListener("DOMContentLoaded", function () {
-        // Get all accordion header elements
-        const headers = document.querySelectorAll(".");
+  headers.forEach((header) => {
+    header.addEventListener("click", function () {
+      const contentId = this.id.replace("-header", "-content");
+      const content = document.getElementById(contentId);
+      const icon = this.querySelector("svg");
 
-        headers.forEach((header) => {
-          header.addEventListener("click", function () {
-            // Get the ID of the content linked to this header
-            // Assuming the content ID is based on the header ID (e.g., 'sort-header' -> 'sort-content')
-            const contentId = this.id.replace("-header", "-content");
-            const content = document.getElementById(contentId);
-            const icon = this.querySelector("svg");
+      if (content && icon) {
+        const isHidden =
+          content.classList.contains("hidden") ||
+          content.style.maxHeight === "0px" ||
+          content.style.maxHeight === "";
 
-            if (content && icon) {
-              // Check if the content is currently hidden/collapsed (adjust based on your initial state)
-              const isHidden =
-                content.classList.contains("hidden") ||
-                content.style.maxHeight === "0px" ||
-                content.style.maxHeight === "";
+        if (isHidden) {
+          // EXPAND
+          content.classList.remove("p-0");    // ADD
+          content.classList.add("p-4");       // ADD
+          content.style.maxHeight = content.scrollHeight + "px";
+          content.classList.remove("hidden");
+          icon.classList.remove("rotate-0");
+          icon.classList.add("rotate-180");
+        } else {
+          // COLLAPSE
+          content.style.maxHeight = "0px";
+          content.classList.add("p-0");       // ADD
+          content.classList.remove("p-4");    // ADD
+          icon.classList.remove("rotate-180");
+          icon.classList.add("rotate-0");
+        }
+      }
+    });
+  });
+});
+    // Price range slider
+    const minSlider = document.getElementById('min-slider');
+    const maxSlider = document.getElementById('max-slider');
+    const minVal = document.getElementById('min-val');
+    const maxVal = document.getElementById('max-val');
+    const track = document.getElementById('slider-track');
 
-              // --- Toggle Logic ---
+    const MIN_RANGE = parseInt(minSlider.min);   // 25
+    const MAX_RANGE = parseInt(minSlider.max);   // 10000
+    const RANGE_SPAN = MAX_RANGE - MIN_RANGE;
 
-              if (isHidden) {
-                // EXPAND: Show the content and rotate the icon up (180 degrees)
-                content.style.maxHeight = content.scrollHeight + "px"; // Set height dynamically
-                content.classList.remove("hidden"); // Ensure it's not hidden
-                icon.classList.remove("rotate-0"); // Assuming the down arrow is 0
-                icon.classList.add("rotate-180"); // Up arrow
-              } else {
-                // COLLAPSE: Hide the content and rotate the icon down (0 degrees)
-                content.style.maxHeight = "0px"; // Collapse it
-                // Optionally add 'hidden' after a transition delay for proper collapse effect
-                icon.classList.remove("rotate-180");
-                icon.classList.add("rotate-0");
-              }
+    function clampHandles() {
+      let min = parseInt(minSlider.value);
+      let max = parseInt(maxSlider.value);
+      if (min >= max) {
+        minSlider.value = max - 1;
+      }
+    }
 
-              // If you want to use the 'max-height' transition for a smooth collapse:
-              // Note: This requires adding 'overflow-hidden' and 'transition-all duration-300 ease-in-out'
-              // to the content div in your HTML.
-            }
-          });
-        });
-      });
-    </script>
-  </body>
+    function updateTrack() {
+      const min = parseInt(minSlider.value);
+      const max = parseInt(maxSlider.value);
+
+      const leftPct = ((min - MIN_RANGE) / RANGE_SPAN) * 100;
+      const rightPct = 100 - ((max - MIN_RANGE) / RANGE_SPAN) * 100;
+
+      track.style.left = leftPct + "%";
+      track.style.right = rightPct + "%";
+    }
+
+    function updateLabels() {
+      minVal.textContent = parseInt(minSlider.value);
+      maxVal.textContent = parseInt(maxSlider.value);
+    }
+
+    minSlider.addEventListener('input', updateSliders);
+    maxSlider.addEventListener('input', updateSliders);
+
+    const minBubble = document.getElementById('min-bubble');
+    const maxBubble = document.getElementById('max-bubble');
+
+    function formatUSD(n) {
+      return Number(n).toLocaleString('en-US', { maximumFractionDigits: 0 });
+    }
+
+    function updateBubbles() {
+      const min = parseInt(minSlider.value);
+      const max = parseInt(maxSlider.value);
+
+      const minPct = ((min - MIN_RANGE) / RANGE_SPAN) * 100;
+      const maxPct = ((max - MIN_RANGE) / RANGE_SPAN) * 100;
+
+      // Center bubbles over thumbs
+      minBubble.style.left = minPct + "%";
+      maxBubble.style.left = maxPct + "%";
+
+      minBubble.textContent = `$${formatUSD(min)}`;
+      maxBubble.textContent = `$${formatUSD(max)}`;
+    }
+
+    // Amend existing functions
+    function updateLabels() {
+      minVal.textContent = formatUSD(minSlider.value);
+      maxVal.textContent = formatUSD(maxSlider.value);
+    }
+
+    function updateSliders() {
+      clampHandles();
+      updateLabels();
+      updateTrack();
+      updateBubbles(); // ensure bubbles move and update text
+    }
+
+    // Initialize on load
+    updateSliders();
+  </script>
+</body>
+
 </html>
