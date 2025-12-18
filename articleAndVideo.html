@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article And Video</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-[#3E3735]">
+  <article>
+        <!-- Top Section -->
+    <section class="bg-[#F7F2EF] px-4 lg:px-24 py-6">
+      <!-- Share / Favorite -->
+      <div class="flex justify-end gap-4 mb-6">
+        <img
+          src="static/icons/heart.svg"
+          class="w-5 h-5 hover:scale-125"
+          alt="heart"
+        />
+        <img
+          src="static/icons/share.svg"
+          class="w-5 h-5 hover:scale-125"
+          alt="share"
+        />
+        
+      </div>
+
+      <!-- Profile Info -->
+      <div class="flex flex-col lg:flex-row lg:justify-between gap-6">
+        <!-- Left -->
+        <div class="flex flex-col lg:flex-row gap-6">
+          <!-- Doctor Image -->
+          <div class="w-full mt-2 lg:w-56">
+            <div
+              class="h-32 w-full overflow-hidden bg-[#DBDAD6] rounded-tl-[30%] rounded-br-[30%] sm:h-40 md:h-56 lg:h-56 lg:bg-transparent lg:rounded-none">
+              <img src="static/images/doc1.png" alt="Doctor" class="w-full h-full object-contain lg:h-auto lg:object-cover lg:object-top" />
+            </div>
+          </div>
+
+          <div>
+            <h2
+              class="text-3xl lg:text-[40px] font-bold text-[#3E3735]"
+            >
+             DR SHAY MATLON 
+            </h2>
+
+            <div class="mt-6 lg:mt-8 space-y-4 text-[18px] ">
+              <div class="flex items-center gap-2 py-0">
+                <img src="static/icons/Clip path group.svg" class="w-5 h-5" />
+                <span>(+3) Kfar Saba, Vaitzman 23</span> <span class="hidden lg:inline-block">|</span> 
+                <img src="static/icons/phone.svg" class="w-5 h-5 hidden lg:inline-block" />
+                <span class="hidden lg:inline-block">052-456 1231</span>
+              </div>
+
+              <div class="flex items-center gap-2  py-0">
+                <img src="static/icons/international.svg" class="w-5 h-5" />
+                <span>French | Russian | English | Hebrew</span>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <img src="static/icons/stetescope.svg" class="w-5 h-5" />
+                <span>25 years experience</span>
+              </div>
+
+              <div class="flex items-center gap-2">
+                 <img src="static/icons/star.svg" class="w-5 h-5" />
+
+                <span>
+                  4.5 | 300 reviews
+                  <span class="hidden lg:inline-flex items-center gap-1">
+                    |
+                    <img src="static/icons/msg.svg" class="w-5 h-5" />
+                    231 answered questions
+                  </span>
+                </span>
+              </div>
+
+              <div class="flex items-center gap-2 lg:hidden">
+                <img src="static/icons/msg.svg" class="w-5 h-5" />
+                <span>231 answered questions</span>
+              </div>
+
+              <div class="flex items-center gap-2 hidden lg:inline lg:flex">
+                <div class="flex items-center gap-2 bg-[#c8b2a6]  text-sm px-3 py-1 rounded-r-full">
+                  <img src="static/icons/specialOffer.svg" class="w-4 h-4" alt="special offer" />
+                  <span>special offer</span>
+                 </div>
+                <p>
+                  Shekel for one botox area: 250
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Buttons -->
+        <div class="hidden lg:flex gap-3 items-start">
+          <button
+            class="bg-[#3E3735] hover:bg-[#231F1D] text-[#FEFDFC] !text-[18px] px-5 py-2 rounded-2xl"
+          >
+            Send form
+          </button>
+          <button
+            class="bg-[#E4CFC6] text-white w-10 h-10 rounded-full hover:bg-[#C7B5AD] transition-all duration-300"
+          >
+            <img
+              src="static/icons/Vector.svg"
+              class="w-5 h-5 mx-auto"
+              alt="chat"
+            />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab Links -->
+    <section class="px-4 lg:px-24 mt-6 "> 
+      <div class="relative ">
+        <ul id="tabLinks" class="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 !text-[18px] whitespace-nowrap [&>li]:after:content-['|'] [&>li]:after:ml-4 [&>li:last-child]:after:content-none">
+          <li><a href="/about.html">about</a></li>
+          <li><a href="/treatment.html">aesthetic treatments</a></li>
+          <li><a href="/plastic-surgeries.html">plastic surgeries</a></li>
+          <li><a href="/injectable.html">injectables and devices</a></li>
+          <li><a href="/before-and-after-photos.html">before and after photos</a></li>
+          <li><a href="/articleAndVideo.html">articles and videos</a></li>
+          <li><a href="/answered-questions.html">answered questions</a></li>
+          <li><a href="/reviews.html">reviews</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Articles & Videos -->
+    <section id="articles-videos" class="px-4 lg:px-24 mt-[24px] lg:mt-[60px] mb-[60px]">
+      <!-- Title -->
+      <div class="text-center">
+        <h2 class="text-2xl lg:text-[40px] font-extrabold">Articles &amp; Videos</h2>
+        <p class="text-sm lg:text-[22px] text-gray-600 mt-1">See all doctor’s articles &amp; videos</p>
+      </div>
+
+      <!-- Categories carousel -->
+      <div class="mt-[24px] lg:mt-[60px] relative">
+        <div id="av-categories" class="flex gap-x-[38px] lg:gap-x-[16px] overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2">
+          <!-- category chip --> 
+          <div class="min-w-[72px] flex flex-col items-center snap-start">
+            <div class="w-[105px] h-[105px] rounded-full overflow-hidden ring-1 ring-[#E5E1DE]">
+              <img src="static/images/pic1.png" alt="Nose" class="w-full h-full object-cover" />
+            </div>
+            <span class="text-xs mt-1">Nose</span>
+          </div>
+          <div class="min-w-[72px] flex flex-col items-center snap-start">
+            <div class="w-[105px] h-[105px] rounded-full overflow-hidden ring-1 ring-[#E5E1DE]">
+              <img src="static/images/pic2.png" alt="Jawline" class="w-full h-full object-cover" />
+            </div>
+            <span class="text-xs mt-1">Jawline</span>
+          </div>
+          <div class="min-w-[72px] flex flex-col items-center snap-start">
+            <div class="w-[105px] h-[105px] rounded-full overflow-hidden ring-1 ring-[#E5E1DE]">
+              <img src="static/images/pic3.png" alt="Back" class="w-full h-full object-cover" />
+            </div>
+            <span class="text-xs mt-1">Back</span>
+          </div>
+          <div class="min-w-[72px] flex flex-col items-center snap-start">
+            <div class="w-[105px] h-[105px] rounded-full overflow-hidden ring-1 ring-[#E5E1DE]">
+              <img src="static/images/pic4.png" alt="Breasts" class="w-full h-full object-cover" />
+            </div>
+            <span class="text-xs mt-1">Breasts</span>
+          </div>
+          <div class="min-w-[72px] flex flex-col items-center snap-start">
+            <div class="w-[105px] h-[105px] rounded-full overflow-hidden ">
+              <img src="static/images/pic5.png" alt="Legs" class="w-full h-full object-cover" />
+            </div>
+            <span class="text-xs mt-1">Legs</span>
+          </div>
+          <div class="min-w-[72px] flex flex-col items-center snap-start">
+            <div class="w-[105px] h-[105px] rounded-full overflow-hidden">
+              <img src="static/images/pic1.png" alt="Skin" class="w-full h-full object-cover" />
+            </div>
+            <span class="text-xs mt-1">Skin</span>
+          </div>
+          <div class="min-w-[72px] flex flex-col items-center snap-start">
+            <div class="w-[105px] h-[105px] rounded-full overflow-hidden ring-1 ring-[#E5E1DE]">
+              <img src="static/images/pic2.png" alt="Body" class="w-full h-full object-cover" />
+            </div>
+            <span class="text-xs mt-1">Body</span>
+          </div>
+          <div class="min-w-[72px] flex flex-col items-center snap-start">
+            <div class="w-[105px] h-[105px] rounded-full overflow-hidden ring-1 ring-[#E5E1DE]">
+              <img src="static/images/pic3.png" alt="Face" class="w-full h-full object-cover" />
+            </div>
+            <span class="text-xs mt-1">Face</span>
+          </div>
+          <div class="min-w-[72px] flex flex-col items-center snap-start">
+            <div class="w-[105px] h-[105px] rounded-full overflow-hidden ring-1 ring-[#E5E1DE]">
+              <img src="static/images/pic4.png" alt="All" class="w-full h-full object-cover" />
+            </div>
+            <span class="text-xs mt-1">All</span>
+          </div>
+        </div>
+        <div class="absolute inset-y-0 left-0 flex items-center pl-1">
+          <button class="flex w-8 h-8 items-center justify-center rounded-full bg-white shadow" aria-label="Scroll left" data-scroll-left="#av-categories">&#x2039;</button>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-1">
+          <button class="flex w-8 h-8 items-center justify-center rounded-full bg-white shadow" aria-label="Scroll right" data-scroll-right="#av-categories">&#x203A;</button>
+        </div>
+      </div>
+
+      <!-- Tags / results -->
+      <div class="mt-[24px] lg:mt-[60px] flex flex-wrap items-center gap-3 text-[14px]">
+        <div class="flex flex-wrap gap-2">
+          <span class="flex px-3 py-1 rounded-full border text-xs bg-[#E4CFC6]">botox <img src="static/icons/cross small.svg" class="w-5 h-5" /></span>
+          <span class="flex px-3 py-1 rounded-full border text-xs bg-[#E4CFC6]">botox <img src="static/icons/cross small.svg" class="w-5 h-5" /></span>
+          <span class="flex px-3 py-1 rounded-full border text-xs bg-[#E4CFC6]">botox <img src="static/icons/cross small.svg" class="w-5 h-5" /></span>
+          <span class="flex px-3 py-1 rounded-full border text-xs bg-[#E4CFC6]">botox <img src="static/icons/cross small.svg" class="w-5 h-5" /></span>
+          <span class="flex px-3 py-1 rounded-full border text-xs bg-[#E4CFC6]">botox <img src="static/icons/cross small.svg" class="w-5 h-5" /></span>
+          <span class="flex px-3 py-1 rounded-full border text-xs bg-[#E4CFC6]">botox <img src="static/icons/cross small.svg" class="w-5 h-5" /></span>
+          <span class="flex px-3 py-1 rounded-full border text-xs bg-[#E4CFC6]">botox <img src="static/icons/cross small.svg" class="w-5 h-5" /></span>
+          <span class="flex px-3 py-1 rounded-full border text-xs bg-[#E4CFC6]">botox <img src="static/icons/cross small.svg" class="w-5 h-5" /></span>
+        </div>
+        <button class="text-[#3E3735] underline flex">clean all <img src="static/icons/cross small.svg" class="w-[16px] h-[16px]" /></button>
+        <span class="text-[18px] text-gray-600">results 34 <span class="font-bold">Face</span></span>
+      </div>
+
+      <!-- Content & Filters -->
+      <div class="mt-[24px] lg:mt-[60px] lg:flex lg:items-start lg:gap-8">
+                <!-- Filters -->
+        <aside class="hidden border border-[#E5E1DE] rounded-xl lg:block w-[345px] h-[860px]" >
+          <div class="sticky top-4 space-y-4">
+            <div class="p-4 bg-white space-y-3">
+              <div class="flex items-center justify-between text-[18px]  text-[#000000]">
+                <span>sort by</span>
+                <img src="static/icons/chevron-up.svg" class="w-5 h-5" />
+              </div>
+              <hr class="border-[#E5E1DE]" />
+              <div class="space-y-3 text-[18px] text-[#000000]">
+                <label class="flex items-center gap-2"><input type="radio" name="sort" checked class="accent-[#C7B5AD]" > <span>most recent</span></label>
+                <label class="flex items-center gap-2"><input type="radio" name="sort" class="accent-[#C7B5AD]"> <span>most old</span></label>
+              </div>
+            </div>
+
+            <div class="px-4 bg-white space-y-3">
+              <div class="flex items-center justify-between text-[18px]  text-[#000000]">
+                <span>procedure name</span>
+                <img src="static/icons/chevron-up.svg" class="w-5 h-5" />
+              </div>
+              <hr class="border-[#E5E1DE]" />
+              <div class="relative">
+                <input type="text" placeholder="Search" class="w-full rounded-md border border-[#E5E1DE] px-3 py-2 text-sm pr-9" />
+                <img src="static/icons/search.svg" class="w-5 h-5 absolute right-3 top-1/2 -translate-y-1/2 text-gray-500" />
+              </div>
+              <div class="space-y-3 text-[18px] text-[#000000]">
+                <label class="flex items-center gap-2"><input type="checkbox" checked class="accent-[#C7B5AD]"> <span>Botox</span></label>
+                <label class="flex items-center gap-2"><input type="checkbox" class="accent-[#C7B5AD]"> <span>Mesotherapy (35)</span></label>
+                <label class="flex items-center gap-2"><input type="checkbox" class="accent-[#C7B5AD]"> <span>Skin Booster (35)</span></label>
+                <label class="flex items-center gap-2"><input type="checkbox" class="accent-[#C7B5AD]"> <span>Hair Removal (35)</span></label>
+                <label class="flex items-center gap-2"><input type="checkbox" class="accent-[#C7B5AD]"> <span>Ultherapy (35)</span></label>
+                <label class="flex items-center gap-2"><input type="checkbox" class="accent-[#C7B5AD]"> <span>Hifu (35)</span></label>
+              </div>
+            </div>
+
+            <div class="px-4 bg-white space-y-3">
+              <div class="flex items-center justify-between text-[18px]  text-[#000000]">
+                <span>procedure type</span>
+                <img src="static/icons/chevron-down.svg" class="w-5 h-5" />
+              </div>
+              <hr class="border-[#E5E1DE]" />
+              <div class="text-[18px] text-[#000000] space-y-2">
+                <label class="flex items-center gap-2"><input type="checkbox" checked class="accent-[#C7B5AD]"> <span>Botox</span></label>
+              </div>
+            </div>
+
+            <div class="px-4 bg-white space-y-3">
+              <div class="flex items-center justify-between text-[18px] text-[#000000]">
+                <span>price</span>
+               <img src="static/icons/Chevron-up.svg" class="w-5 h-5" />
+              </div>
+              <hr class="border-[#E5E1DE]" />
+              <div class="space-y-2 text-xs text-gray-600">
+                <div class="flex items-center gap-2">
+                  <input type="range" min="0" max="1000" value="500" class="w-full accent-[#C7B5AD] " />
+                </div>
+                <div class="flex justify-between text-[11px] text-[#3E3735]">
+                  <span>0</span>
+                  <span>200</span>
+                  <span>500</span>
+                  <span>+10,000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <!-- Cards -->
+        <div class="w-full lg:flex-1 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- repeatable card -->
+          <article class="bg-white rounded-xl border border-[#E5E1DE] shadow-sm p-4 flex flex-col gap-3">
+            <div class="bg-gray-200 rounded-md h-40"></div>
+            <h3 class="font-bold text-[22px]">Biostimulators</h3>
+            <p class="text-[18px] text-[#000000]">All about biostimulators</p>
+            <div class="text-[14px] text-gray-500">30/10/2023</div>
+          </article>
+
+          <article class="bg-white rounded-xl border border-[#E5E1DE] shadow-sm p-4 flex flex-col gap-3">
+            <div class="bg-gray-200 rounded-md h-40"></div>
+            <h3 class="font-bold text-[22px]">Botox</h3>
+            <p class="text-[18px] text-[#000000]">Who can do botox?</p>
+            <div class="text-[14px] text-gray-500">30/10/2023</div>
+          </article>
+
+          <article class="bg-white rounded-xl border border-[#E5E1DE] shadow-sm p-4 flex flex-col gap-3">
+            <div class="bg-gray-200 rounded-md h-40"></div>
+            <h3 class="font-bold text-[22px]">Hyaluronic acid</h3>
+            <p class="text-[18px] text-[#000000]">Did you know HA stays more than a year?</p>
+            <div class="text-[14px] text-gray-500">30/10/2023</div>
+          </article>
+
+          <article class="bg-white rounded-xl border border-[#E5E1DE] shadow-sm p-4 flex flex-col gap-3">
+            <div class="bg-gray-200 rounded-md h-40"></div>
+            <h3 class="font-bold text-[22px]">Ultherapy</h3>
+            <p class="text-[18px] text-[#000000]">Lift results you can see.</p>
+            <div class="text-[14px] text-gray-500">30/10/2023</div>
+          </article>
+
+          <article class="bg-white rounded-xl border border-[#E5E1DE] shadow-sm p-4 flex flex-col gap-3">
+            <div class="bg-gray-200 rounded-md h-40"></div>
+            <h3 class="font-bold text-[22px]  ">Hair Removal</h3>
+            <p class="text-[18px] text-[#000000]">Laser hair removal overview.</p>
+            <div class="text-[14px] text-gray-500">30/10/2023</div>
+          </article>
+
+          <article class="bg-white rounded-xl border border-[#E5E1DE] shadow-sm p-4 flex flex-col gap-3">
+            <div class="bg-gray-200 rounded-md h-40"></div>
+            <h3 class="font-bold text-[22px]">Skin booster</h3>
+            <p class="text-[18px] text-[#000000]">Boosters for texture and glow.</p>
+            <div class="text-[14px] text-gray-500">30/10/2023</div>
+          </article>
+
+          <!-- card with two previews -->
+           
+             <article class="rounded-xl border border-[#E5E1DE] shadow-sm p-4 flex flex-col gap-3">
+               <div class="flex gap-2 h-40">
+                 <div class="bg-gray-200 rounded-md flex-1"></div>
+                 <div class="bg-gray-200 rounded-md flex-1"></div>
+               </div>
+               <h3 class="font-bold text-[22px]">Botox</h3>
+               <p class="text-[18px] text-[#000000]">Results and stories after treatment.</p>
+               <div class="text-[14px] text-gray-500">30/10/2023</div>
+             </article>
+             <article class="rounded-xl border border-[#E5E1DE] shadow-sm p-4 flex flex-col gap-3">
+               <div class="flex gap-2 h-40">
+                 <div class="bg-gray-200 rounded-md flex-1"></div>
+                 <div class="bg-gray-200 rounded-md flex-1"></div>
+               </div>
+               <h3 class="font-bold text-[22px]">Botox</h3>
+               <p class="text-[18px] text-[#000000]">Results and stories after treatment.</p>
+               <div class="text-[14px] text-gray-500">30/10/2023</div>
+             </article>
+             <article class="rounded-xl border border-[#E5E1DE] shadow-sm p-4 flex flex-col gap-3">
+               <div class="flex gap-2 h-40">
+                 <div class="bg-gray-200 rounded-md flex-1"></div>
+                 <div class="bg-gray-200 rounded-md flex-1"></div>
+               </div>
+               <h3 class="font-bold text-[22px]">Botox</h3>
+               <p class="text-[18px] text-[#000000]">Results and stories after treatment.</p>
+               <div class="text-[14px] text-gray-500">30/10/2023</div>
+             </article>
+
+       
+        </div>
+
+
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+
+        // Horizontal scroll controls for card sections
+        function bindScrollControls() {
+          var leftButtons = document.querySelectorAll('[data-scroll-left]');
+          var rightButtons = document.querySelectorAll('[data-scroll-right]');
+          leftButtons.forEach(function(btn){
+            var target = document.querySelector(btn.getAttribute('data-scroll-left'));
+            if (!target) return;
+            btn.addEventListener('click', function(){
+              target.scrollBy({ left: -target.clientWidth * 0.9, behavior: 'smooth' });
+            });
+          });
+          rightButtons.forEach(function(btn){
+            var target = document.querySelector(btn.getAttribute('data-scroll-right'));
+            if (!target) return;
+            btn.addEventListener('click', function(){
+              target.scrollBy({ left: target.clientWidth * 0.9, behavior: 'smooth' });
+            });
+          });
+        }
+        bindScrollControls();
+
+        // Bold the current page tab link
+        var nav = document.getElementById('tabLinks');
+        if (nav) {
+          var currentFile = (location.pathname.split('/').pop() || '').toLowerCase();
+          var links = nav.querySelectorAll('a');
+          links.forEach(function(a){
+            var href = (a.getAttribute('href') || '').toLowerCase();
+            // ignore pure hash links
+            if (href.startsWith('#')) return;
+            var targetFile = href.split('/').pop().split('#')[0];
+            if (targetFile === currentFile) {
+              a.classList.add('font-bold');
+              a.setAttribute('aria-current','page');
+            } else {
+              a.classList.remove('font-bold');
+              a.removeAttribute('aria-current');
+            }
+          });
+        }
+
+      });
+    </script>
+  </article>
+</body>
+</html>
