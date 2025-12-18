@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Injectable Tab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-white text-[#3E3735]">
+    <!-- Top Section -->
+    <section class="bg-[#F7F2EF] px-4 lg:px-24 py-6">
+      <!-- Share / Favorite -->
+      <div class="flex justify-end gap-4 mb-6">
+        <img
+          src="static/icons/heart.svg"
+          class="w-5 h-5 hover:scale-125"
+          alt="heart"
+        />
+        <img
+          src="static/icons/share.svg"
+          class="w-5 h-5 hover:scale-125"
+          alt="share"
+        />
+        
+      </div>
+
+      <!-- Profile Info -->
+      <div class="flex flex-col lg:flex-row lg:justify-between gap-6">
+        <!-- Left -->
+        <div class="flex flex-col lg:flex-row gap-6">
+          <!-- Doctor Image -->
+          <div class="w-full mt-2 lg:w-56">
+            <div
+              class="h-32 w-full overflow-hidden bg-[#DBDAD6] rounded-tl-[30%] rounded-br-[30%] sm:h-40 md:h-56 lg:h-56 lg:bg-transparent lg:rounded-none">
+              <img src="static/images/doc1.png" alt="Doctor" class="w-full h-full object-contain lg:h-auto lg:object-cover lg:object-top" />
+            </div>
+          </div>
+
+          <div>
+            <h2
+              class="text-3xl lg:text-[40px] font-bold text-[#3E3735]"
+            >
+             DR SHAY MATLON 
+            </h2>
+
+            <div class="mt-6 lg:mt-8 space-y-4 text-[18px] ">
+              <div class="flex items-center gap-2 py-0">
+                <img src="static/icons/Clip path group.svg" class="w-5 h-5" />
+                <span>(+3) Kfar Saba, Vaitzman 23</span> <span class="hidden lg:inline-block">|</span> 
+                <img src="static/icons/phone.svg" class="w-5 h-5 hidden lg:inline-block" />
+                <span class="hidden lg:inline-block">052-456 1231</span>
+              </div>
+
+              <div class="flex items-center gap-2  py-0">
+                <img src="static/icons/international.svg" class="w-5 h-5" />
+                <span>French | Russian | English | Hebrew</span>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <img src="static/icons/stetescope.svg" class="w-5 h-5" />
+                <span>25 years experience</span>
+              </div>
+
+              <div class="flex items-center gap-2">
+                 <img src="static/icons/star.svg" class="w-5 h-5" />
+
+                <span>
+                  4.5 | 300 reviews
+                  <span class="hidden lg:inline-flex items-center gap-1">
+                    |
+                    <img src="static/icons/msg.svg" class="w-5 h-5" />
+                    231 answered questions
+                  </span>
+                </span>
+              </div>
+
+              <div class="flex items-center gap-2 lg:hidden">
+                <img src="static/icons/msg.svg" class="w-5 h-5" />
+                <span>231 answered questions</span>
+              </div>
+
+              <div class="flex items-center gap-2 hidden lg:inline lg:flex">
+                <div class="flex items-center gap-2 bg-[#c8b2a6]  text-sm px-3 py-1 rounded-r-full">
+                  <img src="static/icons/specialOffer.svg" class="w-4 h-4" alt="special offer" />
+                  <span>special offer</span>
+                 </div>
+                <p>
+                  Shekel for one botox area: 250
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Buttons -->
+        <div class="hidden lg:flex gap-3 items-start">
+          <button
+            class="bg-[#3E3735] hover:bg-[#231F1D] text-[#FEFDFC] !text-[18px] px-5 py-2 rounded-2xl"
+          >
+            Send form
+          </button>
+          <button
+            class="bg-[#E4CFC6] text-white w-10 h-10 rounded-full hover:bg-[#C7B5AD] transition-all duration-300"
+          >
+            <img
+              src="static/icons/Vector.svg"
+              class="w-5 h-5 mx-auto"
+              alt="chat"
+            />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab Links -->
+    <section class="px-4 lg:px-24 mt-6 "> 
+      <div >
+        <ul id="tabLinks_injectable" class="flex gap-4 overflow-x-auto !text-[18px] whitespace-nowrap [&>li]:after:content-['|'] [&>li]:after:ml-4 [&>li:last-child]:after:content-none">
+          <li><a href="/about.html">about</a></li>
+          <li><a href="/treatment.html">aesthetic treatments</a></li>
+          <li><a href="/plastic-surgeries.html">plastic surgeries</a></li>
+          <li><a href="/injectable.html">injectables and devices</a></li>
+          <li><a href="/before-and-after-photos.html">before and after photos</a></li>
+          <li><a href="#answered-questions">answered questions</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Description -->
+    <section class="px-4 lg:px-24 mt-[60px]">
+      <div class="flex flex-col-reverse lg:flex-row gap-8">
+        <div class="space-y-4 !text-[18px]">
+          <p>
+            Dr Shay Matlon performing aesthetic treatments most popular today in the market. He graduated multiply course in order to become professional in his area. <span id="moreText_injectable" class="hidden"> Dr Shay Matlon is a member of the Israeli Society of Aesthetic Medicine and the International Association of Aesthetic Medicine. He has more than 25 years of experience in the field of aesthetic medicine and has treated thousands of patients from all over the world. Dr Shay Matlon is known for his natural results and his ability to create a personalized treatment plan for each patient. </span>
+          </p>
+
+          <a href="#" id="readMore_injectable" class="underline text-[#3E3735]">read more</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cards Section1 -->
+    <section id="injectables" class="px-4 lg:px-24 mt-[60px] space-y-12">
+      <!-- Category -->
+      <div>
+       <div class="flex justify-between">
+         <h3 class="!text-[24px] font-bold mb-4">Injectables</h3>
+         <div class="lg:hidden">
+            <button class=" -translate-y-1/2 px-3 py-2 rounded-full bg-white/80 shadow" aria-label="Scroll left" data-scroll-left="#cards-scroll-1">&lt;</button>
+            <button class=" -translate-y-1/2 px-3 py-2 rounded-full bg-white/80 shadow" aria-label="Scroll right" data-scroll-right="#cards-scroll-1">&gt;</button>
+          </div>
+         <!-- <img src="static/icons/chevrons.svg" class="hidden lg:block w-8 h-8" /> -->
+       </div>
+
+        <div class="relative">
+          <div class="flex lg:grid lg:grid-cols-5 gap-6 overflow-x-auto lg:overflow-visible snap-x snap-mandatory scroll-smooth pb-2" id="cards-scroll-1">
+          <!-- Card -->
+          <div class="bg-white rounded-xl shadow p-4 transform hover:scale-105 transition-all duration-300 min-w-[80%] sm:min-w-[60%] lg:min-w-0 snap-start">
+            <h4 class="font-bold !text-[22px]">Mesotheraphy</h4>
+            <ul>
+              <li>Sculptra</li>
+              <li>botox</li>
+              <li>RadiesseSculptra</li>
+              <li>RadiesseSculptra</li>
+              <li>RadiesseSculptra</li>
+            </ul>
+            <p class="text-xs text-gray-500 mt-2">
+              <a class="underline absolute bottom-4 right-4" href="#">Show More</a></p>
+          </div>
+
+          <div class="bg-white rounded-xl shadow p-4 transform hover:scale-105 transition-all duration-300 min-w-[80%] sm:min-w-[60%] lg:min-w-0 snap-start">
+            <h4 class="font-bold !text-[22px]">Skin Booster</h4>
+           <ul>
+              <li>Sculptra</li>
+              <li>botox</li>
+              <li>RadiesseSculptra</li>
+              <li>RadiesseSculptra</li>
+              <li>RadiesseSculptra</li>
+              <li>RadiesseSculptra</li>
+              <li>RadiesseSculptra</li>
+            </ul>
+            <p class="text-xs text-gray-500 mt-2">
+              <a class="underline absolute bottom-4 right-4" href="#">Show More</a></p>
+          </div>
+
+          <div class="bg-white rounded-xl shadow p-4 transform hover:scale-105 transition-all duration-300 min-w-[80%] sm:min-w-[60%] lg:min-w-0 snap-start">
+            <h4 class="font-bold !text-[22px]">Botulinum Toxin</h4>
+           <ul>
+            <li>Botox</li>
+            <li>Dysport</li>
+            <li>Xeomin</li>
+           </ul>
+            <p class="text-xs text-gray-500 mt-2">
+              <a class="underline absolute bottom-4 right-4" href="#">Show More</a></p>
+          </div>
+
+          <div class="bg-white rounded-xl shadow p-4 transform hover:scale-105 transition-all duration-300 min-w-[80%] sm:min-w-[60%] lg:min-w-0 snap-start">
+             <h4 class="font-bold !text-[22px]">Hailuronic Acid</h4>
+            <ul>
+              <li>Sculptra</li>
+              <li>Sculptra</li>
+              <li>Sculptra</li>
+              <li>Sculptra</li>
+              <li>Sculptra</li>
+              <li>Sculptra</li>
+              <li>Sculptra</li>
+            </ul>
+            <p class="text-xs text-gray-500 mt-2">
+              <a class="underline absolute bottom-4  right-4" href="#">Show More</a></p>
+          </div>
+
+          <div class="bg-white rounded-xl shadow p-4 transform hover:scale-105 transition-all duration-300 min-w-[80%] sm:min-w-[60%] lg:min-w-0 snap-start">
+             <h4 class="font-bold !text-[22px]">Skin Booster</h4>
+           <ul>
+            <li>Sculptra</li>
+            <li>botox</li>
+            <li>RadiesseSculptra</li>
+           </ul>
+            <p class="text-xs text-gray-500 mt-2">
+              <a class="underline absolute bottom-4  right-4" href="#">Show More</a></p>
+          </div>
+          </div>
+          <!-- Mobile controls -->
+          <div class="lg:hidden">
+            <button class="absolute left-2 top-1/2 -translate-y-1/2 px-3 py-2 rounded-full bg-white/80 shadow" aria-label="Scroll left" data-scroll-left="#cards-scroll-1">&lt;</button>
+            <button class="absolute right-2 top-1/2 -translate-y-1/2 px-3 py-2 rounded-full bg-white/80 shadow" aria-label="Scroll right" data-scroll-right="#cards-scroll-1">&gt;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Cards Section2 -->
+    <section id="aesthetic-devices" class="px-4 lg:px-24 mt-[60px] space-y-12">
+      <!-- Category -->
+      <div>
+        <div class="flex justify-between">
+         <h3 class="!text-[24px] font-bold mb-4">Aesthetic Devices</h3>
+         <!-- <img src="static/icons/chevrons.svg" class="hidden lg:block w-8 h-8" /> -->
+       </div>
+        <div class="relative">
+          <div class="flex lg:grid lg:grid-cols-5 gap-6 overflow-x-auto lg:overflow-visible snap-x snap-mandatory scroll-smooth pb-2" id="cards-scroll-3">
+          <!-- Card -->
+          <div class="bg-white rounded-xl shadow p-4 transform hover:scale-105 transition-all duration-300 min-w-[80%] sm:min-w-[60%] lg:min-w-0 snap-start">
+            <h4 class="font-bold !text-[22px]">Device Technology5</h4>
+            <ul>
+              <li>
+                Juviderm
+              </li>
+              <li>Restylane</li>
+            </ul>
+            <p class="text-xs text-gray-500 mt-2">
+              <a class="underline absolute bottom-4 right-4" href="#">Show More</a></p>
+          </div>
+
+          <div class="bg-white rounded-xl shadow p-4 transform hover:scale-105 transition-all duration-300 min-w-[80%] sm:min-w-[60%] lg:min-w-0 snap-start">
+            <h4 class="font-bold !text-[22px]">Device Technology4</h4>
+           <ul>
+            <li>Sculptra</li>
+            <li>botox</li>
+            <li>RadiesseSculptra</li>
+           </ul>
+            <p class="text-xs text-gray-500 mt-2">
+              <a class="underline absolute bottom-4 right-4" href="#">Show More</a></p>
+          </div>
+
+          <div class="bg-white rounded-xl shadow p-4 transform hover:scale-105 transition-all duration-300 min-w-[80%] sm:min-w-[60%] lg:min-w-0 snap-start">
+            <h4 class="font-bold">RF</h4>
+           <ul>
+            <li>Mortheus 8</li>
+            <li>Fractora</li>
+           </ul>
+            <p class="text-xs text-gray-500 mt-2">
+              <a class="underline absolute bottom-4 right-4" href="#">Show More</a></p>
+          </div>
+
+          <div class="bg-white rounded-xl shadow p-4 transform hover:scale-105 transition-all duration-300 min-w-[80%] sm:min-w-[60%] lg:min-w-0 snap-start">
+             <h4 class="font-bold !text-[22px]">Laser CO2</h4>
+            <ul>
+              <li>
+                Laser1
+              </li>
+              <li>Laser2</li>
+              <li>Laser3</li>
+            </ul>
+            <p class="text-xs text-gray-500 mt-2">
+              <a class="underline absolute bottom-4 right-4" href="#">Show More</a></p>
+          </div>
+
+          <div class="bg-white rounded-xl shadow p-4 transform hover:scale-105 transition-all duration-300 min-w-[80%] sm:min-w-[60%] lg:min-w-0 snap-start">
+             <h4 class="font-bold !text-[22px]">HFU</h4>
+           <ul>
+            <li>Ultherpy</li>
+            <li>Ultraformer</li>
+           </ul>
+            <p class="text-xs text-gray-500 mt-2">
+              <a class="underline absolute bottom-4 right-4" href="#">Show More</a></p>
+          </div>
+          </div>
+          <!-- Mobile controls (overlay) -->
+          <div class="lg:hidden">
+            <button class="absolute left-2 top-1/2 -translate-y-1/2 px-3 py-2 rounded-full bg-white/80 shadow" aria-label="Scroll left" data-scroll-left="#cards-scroll-3">&lt;</button>
+            <button class="absolute right-2 top-1/2 -translate-y-1/2 px-3 py-2 rounded-full bg-white/80 shadow" aria-label="Scroll right" data-scroll-right="#cards-scroll-3">&gt;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var readMore = document.getElementById('readMore_injectable');
+        var moreText = document.getElementById('moreText_injectable');
+        if (!readMore || !moreText) return;
+        readMore.addEventListener('click', function (e) {
+          e.preventDefault();
+          if (moreText.classList.contains('hidden')) {
+            moreText.classList.remove('hidden');
+            readMore.textContent = 'read less';
+          } else {
+            moreText.classList.add('hidden');
+            readMore.textContent = 'read more';
+          }
+        });
+
+        // Horizontal scroll controls for card sections
+        function bindScrollControls() {
+          var leftButtons = document.querySelectorAll('[data-scroll-left]');
+          var rightButtons = document.querySelectorAll('[data-scroll-right]');
+          leftButtons.forEach(function(btn){
+            var target = document.querySelector(btn.getAttribute('data-scroll-left'));
+            if (!target) return;
+            btn.addEventListener('click', function(){
+              target.scrollBy({ left: -target.clientWidth * 0.9, behavior: 'smooth' });
+            });
+          });
+          rightButtons.forEach(function(btn){
+            var target = document.querySelector(btn.getAttribute('data-scroll-right'));
+            if (!target) return;
+            btn.addEventListener('click', function(){
+              target.scrollBy({ left: target.clientWidth * 0.9, behavior: 'smooth' });
+            });
+          });
+        }
+        bindScrollControls();
+
+        // Bold the current page tab link
+        var nav = document.getElementById('tabLinks_injectable');
+        if (nav) {
+          var currentFile = (location.pathname.split('/').pop() || '').toLowerCase();
+          var links = nav.querySelectorAll('a');
+          links.forEach(function(a){
+            var href = (a.getAttribute('href') || '').toLowerCase();
+            // ignore pure hash links
+            if (href.startsWith('#')) return;
+            var targetFile = href.split('/').pop().split('#')[0];
+            if (targetFile === currentFile) {
+              a.classList.add('font-bold');
+              a.setAttribute('aria-current','page');
+            } else {
+              a.classList.remove('font-bold');
+              a.removeAttribute('aria-current');
+            }
+          });
+        }
+
+      });
+    </script>
+  </body>
+</html>
