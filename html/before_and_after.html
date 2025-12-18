@@ -84,17 +84,17 @@
     <div class="w-full bg-[#F7F2EF] min-h-111.25 p-4 lg:px-50.25">
       <div class="flex flex-row justify-end gap-x-4 mb-4 lg:mb-10">
         <a href="">
-          <img src="/website_doctors_list/static/icons/share.svg" alt="Share icon" class="w-5 h-5" />
+          <img src="./website_doctors_list/static/icons/share.svg" alt="Share icon" class="w-5 h-5" />
         </a>
         <a href="">
-          <img src="/website_doctors_list/static/icons/heart.svg" alt="Heart icon" class="w-5 h-5" />
+          <img src="./website_doctors_list/static/icons/heart.svg" alt="Heart icon" class="w-5 h-5" />
         </a>
       </div>
 
       <div class="flex flex-col lg:flex-row lg:justify-between">
         <div class="flex flex-col lg:flex-row lg:gap-x-6">
           <div class="w-full lg:w-50.25 h-auto">
-            <img src=/website_doctors_list/static/images/doctor-profile.png class="w-full h-full
+            <img src=./website_doctors_list/static/images/doctor-profile.png class="w-full h-full
               object-cover rounded-tl-[30%] rounded-br-[30%]" alt="Doctor image" />
           </div>
 
@@ -105,32 +105,34 @@
 
             <div class="flex flex-col mt-6 gap-y-2.5">
               <div class="flex flex-row items-center">
-                <img src="/website_doctors_list/static/icons/location.svg" alt="Location icon" class="w-7 h-7 mt-1 mr-2" />
+                <img src="./website_doctors_list/static/icons/location.svg" alt="Location icon"
+                  class="w-7 h-7 mt-1 mr-2" />
                 <span class="text-[#3E3735] text-[14px] font-semibold leading-5">
                   Virginia, USA |
                 </span>
               </div>
               <div class="flex flex-row items-center">
-                <img src="/website_doctors_list/static/icons/globe.svg" alt="Globe icon" class="w-7 h-7 mt-1 mr-2" />
+                <img src="./website_doctors_list/static/icons/globe.svg" alt="Globe icon" class="w-7 h-7 mt-1 mr-2" />
                 <p class="text-[#3E3735] text-[14px] font-semibold leading-5">
                   +1 234 567 890
                 </p>
               </div>
               <div class="flex flex-row items-center">
-                <img src="/website_doctors_list/static/icons/globe.svg" alt="Globe icon" class="w-7 h-7 mt-1 mr-2" />
+                <img src="./website_doctors_list/static/icons/globe.svg" alt="Globe icon" class="w-7 h-7 mt-1 mr-2" />
                 <p class="text-[#3E3735] text-[14px] font-semibold leading-5">
                   25 patients today
                 </p>
               </div>
               <div class="flex flex-row items-center">
-                <img src="/website_doctors_list/static/icons/star-bold.svg" alt="Star-Bold
+                <img src="./website_doctors_list/static/icons/star-bold.svg" alt="Star-Bold
                   icon" class="w-7 h-7 mt-1 mr-2" />
                 <p class="text-[#3E3735] text-[14px] font-semibold leading-5">
                   4.5 | 200 Reviews | Cardiology
                 </p>
               </div>
               <div class="flex flex-row items-center">
-                <img src="/website_doctors_list/static/icons/message.svg" alt="Message icon" class="w-7 h-7 mt-1 mr-2" />
+                <img src="./website_doctors_list/static/icons/message.svg" alt="Message icon"
+                  class="w-7 h-7 mt-1 mr-2" />
                 <p class="text-[#3E3735] text-[14px] font-semibold leading-5">
                   Message | Book Appointment | Reviews
                 </p>
@@ -309,18 +311,20 @@
 
               <div id="sort-content"
                 class="content-transition p-0 space-y-2 border-t border-[#E4CFC6]! max-h-0 overflow-hidden">
-                <div class="p-4 pt-0">
+                <div class="p-0 pt-0">
                   <label
-                    class="flex items-center justify-end text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
-                    Most recent
+                    class="flex items-center justify-start text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+               
                     <input type="radio" name="sort"
                       class="form-radio h-4 w-4 border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" checked />
+                           Most recent
                   </label>
                   <label
-                    class="flex items-center justify-end text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
-                    Most old
+                    class="flex items-center justify-start text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+                
                     <input type="radio" name="sort"
                       class="form-radio h-4 w-4 border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" />
+                          Most old
                   </label>
                 </div>
               </div>
@@ -350,40 +354,46 @@
 
                 <div class="space-y-2 text-right">
                   <label
-                    class="flex items-center justify-end text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+                    class="flex items-center justify-start text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+
+                    <input type="checkbox"
+                      class="form-checkbox h-4 w-4 rounded border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" />
                     Botox
-                    <input type="checkbox"
-                      class="form-checkbox h-4 w-4 rounded border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" />
                   </label>
                   <label
-                    class="flex items-center justify-end text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+                    class="flex items-center justify-start text-sm gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+
+                    <input type="checkbox"
+                      class="form-checkbox h-4 w-4 rounded border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" />
                     Mesotherapy (35)
-                    <input type="checkbox"
-                      class="form-checkbox h-4 w-4 rounded border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" />
                   </label>
                   <label
-                    class="flex items-center justify-end text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+                    class="flex items-center justify-start text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+
+                    <input type="checkbox"
+                      class="form-checkbox h-4 w-4 rounded border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" />
                     Skin Booster (35)
-                    <input type="checkbox"
-                      class="form-checkbox h-4 w-4 rounded border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" />
                   </label>
                   <label
-                    class="flex items-center justify-end text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+                    class="flex items-center justify-start text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+
+                    <input type="checkbox"
+                      class="form-checkbox h-4 w-4 rounded border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" />
                     Hair Removal (35)
-                    <input type="checkbox"
-                      class="form-checkbox h-4 w-4 rounded border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" />
                   </label>
                   <label
-                    class="flex items-center justify-end text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+                    class="flex items-center justify-start text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+
+                    <input type="checkbox"
+                      class="form-checkbox h-4 w-4 rounded border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" />
                     Ultherapy (35)
-                    <input type="checkbox"
-                      class="form-checkbox h-4 w-4 rounded border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" />
                   </label>
                   <label
-                    class="flex items-center justify-end text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
-                    Hify (35)
+                    class="flex items-center justify-start text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+
                     <input type="checkbox"
                       class="form-checkbox h-4 w-4 rounded border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" />
+                    Hify (35)
                   </label>
                 </div>
               </div>
@@ -467,7 +477,7 @@
               <span class="text-[#3E3735] font-semibold!">Face</span>
               <span> result 34</span>
             </h4>
-            <img src="/website_doctors_list/static//icons/filter.svg" alt="Filter icon" class="w-5 h-5 lg:hidden" />
+            <img src="./website_doctors_list/static//icons/filter.svg" alt="Filter icon" class="w-5 h-5 lg:hidden" />
           </div>
           <div class="flex justify-between!">
             <div class="hidden lg:flex lg:flex-wrap lg:gap-x-2! lg:mt-2">
@@ -504,26 +514,8 @@
           <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-4">
             <div class="bg-white p-4 mt-4 shadow-lg rounded-lg">
               <div class="flex flex-row justify-between gap-x-4">
-                <img src="/website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
-                <img src="/website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
-              </div>
-              <div class="flex flex-col mt-3 gap-y-1">
-                <h5 class="font-semibold text-[22px]!">Skin Booster</h5>
-                <p>
-                  Women treated skin booster injection for face wrinke
-                </p>
-                <p class="text-[#524B46] text-[14px]!">30/10/2023</p>
-                <div class="flex flex-row gap-x-4">
-                  <span class="font-bold">30/10/2023</span>
-                  <span>|</span>
-                  <span>30 mins</span>
-                </div>
-              </div>
-            </div>
-                        <div class="bg-white p-4 mt-4 shadow-lg rounded-lg">
-              <div class="flex flex-row justify-between gap-x-4">
-                <img src="/website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
-                <img src="/website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
+                <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
+                <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
               </div>
               <div class="flex flex-col mt-3 gap-y-1">
                 <h5 class="font-semibold text-[22px]!">Skin Booster</h5>
@@ -540,8 +532,8 @@
             </div>
             <div class="bg-white p-4 mt-4 shadow-lg rounded-lg">
               <div class="flex flex-row justify-between gap-x-4">
-                <img src="/website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
-                <img src="/website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
+                <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
+                <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
               </div>
               <div class="flex flex-col mt-3 gap-y-1">
                 <h5 class="font-semibold text-[22px]!">Skin Booster</h5>
@@ -558,8 +550,8 @@
             </div>
             <div class="bg-white p-4 mt-4 shadow-lg rounded-lg">
               <div class="flex flex-row justify-between gap-x-4">
-                <img src="/website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
-                <img src="/website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
+                <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
+                <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
               </div>
               <div class="flex flex-col mt-3 gap-y-1">
                 <h5 class="font-semibold text-[22px]!">Skin Booster</h5>
@@ -576,8 +568,26 @@
             </div>
             <div class="bg-white p-4 mt-4 shadow-lg rounded-lg">
               <div class="flex flex-row justify-between gap-x-4">
-                <img src="/website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
-                <img src="/website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
+                <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
+                <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
+              </div>
+              <div class="flex flex-col mt-3 gap-y-1">
+                <h5 class="font-semibold text-[22px]!">Skin Booster</h5>
+                <p>
+                  Women treated skin booster injection for face wrinke
+                </p>
+                <p class="text-[#524B46] text-[14px]!">30/10/2023</p>
+                <div class="flex flex-row gap-x-4">
+                  <span class="font-bold">30/10/2023</span>
+                  <span>|</span>
+                  <span>30 mins</span>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white p-4 mt-4 shadow-lg rounded-lg">
+              <div class="flex flex-row justify-between gap-x-4">
+                <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
+                <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
               </div>
               <div class="flex flex-col mt-3 gap-y-1">
                 <h5 class="font-semibold text-[22px]!">Skin Booster</h5>
@@ -610,41 +620,41 @@
       freeMode: true,
       centeredSlides: false,
     });
-document.addEventListener("DOMContentLoaded", function () {
-  const headers = document.querySelectorAll('[id$="-header"]');
+    document.addEventListener("DOMContentLoaded", function () {
+      const headers = document.querySelectorAll('[id$="-header"]');
 
-  headers.forEach((header) => {
-    header.addEventListener("click", function () {
-      const contentId = this.id.replace("-header", "-content");
-      const content = document.getElementById(contentId);
-      const icon = this.querySelector("svg");
+      headers.forEach((header) => {
+        header.addEventListener("click", function () {
+          const contentId = this.id.replace("-header", "-content");
+          const content = document.getElementById(contentId);
+          const icon = this.querySelector("svg");
 
-      if (content && icon) {
-        const isHidden =
-          content.classList.contains("hidden") ||
-          content.style.maxHeight === "0px" ||
-          content.style.maxHeight === "";
+          if (content && icon) {
+            const isHidden =
+              content.classList.contains("hidden") ||
+              content.style.maxHeight === "0px" ||
+              content.style.maxHeight === "";
 
-        if (isHidden) {
-          // EXPAND
-          content.classList.remove("p-0");    // ADD
-          content.classList.add("p-4");       // ADD
-          content.style.maxHeight = content.scrollHeight + "px";
-          content.classList.remove("hidden");
-          icon.classList.remove("rotate-0");
-          icon.classList.add("rotate-180");
-        } else {
-          // COLLAPSE
-          content.style.maxHeight = "0px";
-          content.classList.add("p-0");       // ADD
-          content.classList.remove("p-4");    // ADD
-          icon.classList.remove("rotate-180");
-          icon.classList.add("rotate-0");
-        }
-      }
+            if (isHidden) {
+              // EXPAND
+              content.classList.remove("p-0");    // ADD
+              content.classList.add("p-4");       // ADD
+              content.style.maxHeight = content.scrollHeight + "px";
+              content.classList.remove("hidden");
+              icon.classList.remove("rotate-0");
+              icon.classList.add("rotate-180");
+            } else {
+              // COLLAPSE
+              content.style.maxHeight = "0px";
+              content.classList.add("p-0");       // ADD
+              content.classList.remove("p-4");    // ADD
+              icon.classList.remove("rotate-180");
+              icon.classList.add("rotate-0");
+            }
+          }
+        });
+      });
     });
-  });
-});
     // Price range slider
     const minSlider = document.getElementById('min-slider');
     const maxSlider = document.getElementById('max-slider');
