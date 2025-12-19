@@ -30,14 +30,11 @@
         <!-- Left -->
         <div class="flex flex-col lg:flex-row gap-6">
           <!-- Doctor Image -->
-          <div class="w-full mt-2 lg:w-56">
             <div
-              class="h-40 w-full overflow-hidden bg-[#DBDAD6] rounded-tl-[30%] rounded-br-[30%] sm:h-40 md:h-56 lg:h-56 lg:bg-transparent lg:rounded-none">
-              <img src="static/images/doc1.png" alt="Doctor" class="hidden lg:block w-full h-full object-contain h-auto object-cover object-top" />
-              <img src="static/images/doctor-profile.png" alt="Doctor" class="w-full h-full lg:hidden" />
+              class="h-[126px] md:h-56 w-full lg:w-[208px] overflow-hidden  rounded-tl-[30%] rounded-br-[30%] sm:h-40 md:h-56 lg:h-56 lg:bg-transparent">
+              <img src="static/images/doc12.jpeg" alt="Doctor" class="h-full w-full lg:object-cover object-contain" />
             </div>
-          </div>
-
+    
           <div>
             <h2
               class="text-3xl lg:text-[40px] font-bold text-[#3E3735]"
@@ -130,16 +127,40 @@
       </div>
     </section>
 
-    <!-- Articles & Videos -->
+    <!-- Articles -->
     <section id="articles-videos" class="px-4 lg:px-24 mt-[24px] lg:mt-[60px] mb-[60px]">
       <!-- Title -->
       <div class="text-center">
-        <h2 class="text-2xl lg:text-[40px] font-extrabold">Articles &amp; Videos</h2>
-        <p class="text-sm lg:text-[22px] text-gray-600 mt-1">See all doctor’s articles &amp; videos</p>
+        <h2 class="text-2xl lg:text-[40px] font-extrabold">ביקורות על אסטרה מדיקל</h2>
+        <p class="text-sm lg:text-[22px] text-[#000000] mt-1">אנשים אמיתיים כמוך שיתפו מעל 300,000 ביקורות (והמספרים ממשיכים). 
+קבלו את המידע האמיתי על רופאים, ניתוחים פלסטיים וטיפולים אסתטיים, החל מסיפורי אזהרה ועד לתוצאות משנות חיים.</p>
       </div>
          </div>
        </div>
- 
+        <!-- Tags / results mobile slide filter-->
+       <section class="mt-[24px] lg:mt-[60px]">
+        <div class="flex items-center justify-between">
+          <span class="text-[18px] text-gray-600">results 34 <span class="font-bold">Face</span></span>
+          <button id="openFiltersBtn" aria-expanded="false" class="lg:hidden flex items-center gap-2 text-[18px] text-[#3E3735] border border-[#E5E1DE] rounded-full px-3 py-1 fixed bottom-4 right-4 z-50">
+            <img src="static/icons/filter.svg" class="w-5 h-5" alt="filters" />
+            Filters
+          </button>
+        </div>
+             <div class="flex flex-wrap items-center gap-3 text-[14px]">
+        <div class="mt-[24px] flex flex-wrap gap-2">
+          <span class="flex px-3 py-1 rounded-full border text-xs bg-[#E4CFC6]">botox <img src="static/icons/cross small.svg" class="w-5 h-5" /></span>
+          <span class="flex px-3 py-1 rounded-full border text-xs bg-[#E4CFC6]">botox <img src="static/icons/cross small.svg" class="w-5 h-5" /></span>
+          <span class="flex px-3 py-1 rounded-full border text-xs bg-[#E4CFC6]">botox <img src="static/icons/cross small.svg" class="w-5 h-5" /></span>
+          <span class="flex px-3 py-1 rounded-full border text-xs bg-[#E4CFC6]">botox <img src="static/icons/cross small.svg" class="w-5 h-5" /></span>
+          <span class="flex px-3 py-1 rounded-full border text-xs bg-[#E4CFC6]">botox <img src="static/icons/cross small.svg" class="w-5 h-5" /></span>
+          <span class="flex px-3 py-1 rounded-full border text-xs bg-[#E4CFC6]">botox <img src="static/icons/cross small.svg" class="w-5 h-5" /></span>
+          <span class="flex px-3 py-1 rounded-full border text-xs bg-[#E4CFC6]">botox <img src="static/icons/cross small.svg" class="w-5 h-5" /></span>
+          <span class="flex px-3 py-1 rounded-full border text-xs bg-[#E4CFC6]">botox <img src="static/icons/cross small.svg" class="w-5 h-5" /></span>
+        </div>
+        <button class="text-[#3E3735] text-[18px] underline flex items-center justify-center gap-1 mt-auto">clean all <img src="static/icons/cross small.svg" class="w-[16px] h-[16px]" /></button>
+        
+      </div>
+       </section>
 
       <!-- Content & Filters on Desktop -->
       <div class="mt-[24px] lg:mt-[60px] lg:flex lg:items-start lg:gap-8">
@@ -210,7 +231,7 @@
           </div>
         </aside>
         <!-- Cards -->
-        <div class="bg-red-500 flex-1 space-y-6">
+        <div class="flex-1 space-y-6">
           <div class="space-y-6">
             <article class="bg-white border border-[#E5E1DE] rounded-2xl shadow-sm p-4 lg:p-6" dir="ltr">
               <div class="flex-1 space-y-4">
@@ -221,34 +242,217 @@
                      <img src="static/icons/svg icon.svg" class="w-4 h-4" alt="star" />
                     <span class="text-sm text-[#3E3735] font-semibold">ביקורת פורים</span>
                   </div>
-                  <div class="flex flex-wrap items-center gap-2 text-sm text-[#3E3735]">
-                    <span class="text-xs text-[#3E3735]">22/11/2025</span>
-                    <div class="flex items-center gap-[4px]">
-                      <img src="static/icons/star.svg" class="w-4 h-4" alt="star" />
-                      <img src="static/icons/star.svg" class="w-4 h-4" alt="star" />
-                      <img src="static/icons/star.svg" class="w-4 h-4" alt="star" />
-                      <img src="static/icons/star.svg" class="w-4 h-4" alt="star" />
-                      <img src="static/icons/star.svg" class="w-4 h-4" alt="star" />
+                  <div class="lg:flex flex-wrap items-center gap-2 text-sm text-[#3E3735]">
+                    <span class="b text-xs text-[#3E3735]">22/11/2025</span>
+                    <div class="flex flex-wrap items-center gap-2 mt-2 lg:mt-0">
+                      <div class="flex items-center gap-[4px]">
+                        <img src="static/icons/star.svg" class="w-4 h-4" alt="star" />
+                        <img src="static/icons/star.svg" class="w-4 h-4" alt="star" />
+                        <img src="static/icons/star.svg" class="w-4 h-4" alt="star" />
+                        <img src="static/icons/star.svg" class="w-4 h-4" alt="star" />
+                        <img src="static/icons/star.svg" class="w-4 h-4" alt="star" />
+                      </div>
+                      <span class="text-[#9A8B84] text-xs">|</span>
+                      <span class="text-xs text-[#C7B5AD]">מרוצה מהטיפול</span>
                     </div>
-                    <span class="text-[#9A8B84] text-xs">|</span>
-                    <span class="text-xs text-[#C7B5AD]">מרוצה מהטיפול</span>
                   </div>
                 </div>
-                <p class="text-[15px] leading-7 text-[#3E3735]">
+                <p class="text-[18px] text-[#3E3735]">
                   כמו תמיד הבדיקה הייתה יסודית ומקצועית. עם יחס אישי ואדיבות שנותן ביטחון להמשך מעקב. תמיד עם חיוך ותחושה שהגענו תמיד הבדיקה הייתה יסודית ומקצועית.
                   עם יחס אישי ואדיבות שנותן ביטחון להמשך מעקב. תמיד עם חיוך ותחושה שהגענו תמיד הבדיקה הייתה יסודית ומקצועית. עם יחס אישי ואדיבות שנותן ביטחון להמשך מעקב.
                 </p>
-                <a href="#" class="text-sm font-semibold text-[#3E3735] underline">קרא עוד</a>
+                <a href="#" class="text-sm my-[180px] font-semibold text-[#3E3735] underline">קרא עוד</a>
               </div>
-              <div class="lg:w-[340px] xl:w-[380px] h-[260px] lg:h-[300px] overflow-hidden rounded-xl bg-[#F0EAE7]">
+              <div class="lg:w-[340px] xl:w-[380px] h-[260px] lg:h-[300px] overflow-hidden rounded-xl bg-[#F0EAE7] mt-2">
                 <img src="static/images/image%2072.png" alt="after treatment" class="w-full h-full object-cover" />
               </div>
             </article>
+            <article class="bg-white border border-[#E5E1DE] rounded-2xl shadow-sm p-4 lg:p-6" dir="ltr">
+              <div class="flex-1 space-y-4">
+                  <span class="text-xs lg:text-sm font-semibold text-[#3E3735] bg-[#E4CFC6] px-3 py-1 rounded-full">ביקורת פורים</span>
+                <div class="space-y-2">
+                  <h3 class="text-xl lg:text-2xl font-bold text-[#3E3735] leading-tight">בת 57 ונראית צעירה ב10 שנים אחרי מתיחת פנים</h3>
+                  <div class="flex items-center gap-[4px]">
+                     <img src="static/icons/svg icon.svg" class="w-4 h-4" alt="star" />
+                    <span class="text-sm text-[#3E3735] font-semibold">ביקורת פורים</span>
+                  </div>
+                  <div class="lg:flex flex-wrap items-center gap-2 text-sm text-[#3E3735]">
+                    <span class="b text-xs text-[#3E3735]">22/11/2025</span>
+                    <div class="flex flex-wrap items-center gap-2 mt-2 lg:mt-0">
+                      <div class="flex items-center gap-[4px]">
+                        <img src="static/icons/star.svg" class="w-4 h-4" alt="star" />
+                        <img src="static/icons/star.svg" class="w-4 h-4" alt="star" />
+                        <img src="static/icons/star.svg" class="w-4 h-4" alt="star" />
+                        <img src="static/icons/star.svg" class="w-4 h-4" alt="star" />
+                        <img src="static/icons/star.svg" class="w-4 h-4" alt="star" />
+                      </div>
+                      <span class="text-[#9A8B84] text-xs">|</span>
+                      <span class="text-xs text-[#C7B5AD]">מרוצה מהטיפול</span>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-[18px] text-[#3E3735]">
+                  כמו תמיד הבדיקה הייתה יסודית ומקצועית. עם יחס אישי ואדיבות שנותן ביטחון להמשך מעקב. תמיד עם חיוך ותחושה שהגענו תמיד הבדיקה הייתה יסודית ומקצועית.
+                  עם יחס אישי ואדיבות שנותן ביטחון להמשך מעקב. תמיד עם חיוך ותחושה שהגענו תמיד הבדיקה הייתה יסודית ומקצועית. עם יחס אישי ואדיבות שנותן ביטחון להמשך מעקב.
+                </p>
+                <a href="#" class="text-sm my-[180px] font-semibold text-[#3E3735] underline">קרא עוד</a>
+              </div>
+              <div class="lg:w-[340px] xl:w-[380px] h-[260px] lg:h-[300px] overflow-hidden rounded-xl bg-[#F0EAE7] mt-2">
+                <img src="static/images/image%2072.png" alt="after treatment" class="w-full h-full object-cover" />
+              </div>
+            </article>
+            <article class="bg-white border border-[#E5E1DE] rounded-2xl shadow-sm p-4 lg:p-6" dir="ltr">
+              <div class="flex-1 space-y-4">
+                  <span class="text-xs lg:text-sm font-semibold text-[#3E3735] bg-[#E4CFC6] px-3 py-1 rounded-full">ביקורת פורים</span>
+                <div class="space-y-2">
+                  <h3 class="text-xl lg:text-2xl font-bold text-[#3E3735] leading-tight">בת 57 ונראית צעירה ב10 שנים אחרי מתיחת פנים</h3>
+                  <div class="flex items-center gap-[4px]">
+                     <img src="static/icons/svg icon.svg" class="w-4 h-4" alt="star" />
+                    <span class="text-sm text-[#3E3735] font-semibold">ביקורת פורים</span>
+                  </div>
+                  <div class="lg:flex flex-wrap items-center gap-2 text-sm text-[#3E3735]">
+                    <span class="b text-xs text-[#3E3735]">22/11/2025</span>
+                    <div class="flex flex-wrap items-center gap-2 mt-2 lg:mt-0">
+                      <div class="flex items-center gap-[4px]">
+                        <img src="static/icons/star.svg" class="w-4 h-4" alt="star" />
+                        <img src="static/icons/star.svg" class="w-4 h-4" alt="star" />
+                        <img src="static/icons/star.svg" class="w-4 h-4" alt="star" />
+                        <img src="static/icons/star.svg" class="w-4 h-4" alt="star" />
+                        <img src="static/icons/star.svg" class="w-4 h-4" alt="star" />
+                      </div>
+                      <span class="text-[#9A8B84] text-xs">|</span>
+                      <span class="text-xs text-[#C7B5AD]">מרוצה מהטיפול</span>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-[18px] text-[#3E3735]">
+                  כמו תמיד הבדיקה הייתה יסודית ומקצועית. עם יחס אישי ואדיבות שנותן ביטחון להמשך מעקב. תמיד עם חיוך ותחושה שהגענו תמיד הבדיקה הייתה יסודית ומקצועית.
+                  עם יחס אישי ואדיבות שנותן ביטחון להמשך מעקב. תמיד עם חיוך ותחושה שהגענו תמיד הבדיקה הייתה יסודית ומקצועית. עם יחס אישי ואדיבות שנותן ביטחון להמשך מעקב.
+                </p>
+                <a href="#" class="text-sm my-[180px] font-semibold text-[#3E3735] underline">קרא עוד</a>
+              </div>
+              <div class="lg:w-[340px] xl:w-[380px] h-[260px] lg:h-[300px] overflow-hidden rounded-xl bg-[#F0EAE7] mt-2">
+                <img src="static/images/image%2072.png" alt="after treatment" class="w-full h-full object-cover" />
+              </div>
+            </article>
+            <article class="bg-white border border-[#E5E1DE] rounded-2xl shadow-sm p-4 lg:p-6" dir="ltr">
+              <div class="flex-1 space-y-4">
+                  <span class="text-xs lg:text-sm font-semibold text-[#3E3735] bg-[#E4CFC6] px-3 py-1 rounded-full">ביקורת פורים</span>
+                <div class="space-y-2">
+                  <h3 class="text-xl lg:text-2xl font-bold text-[#3E3735] leading-tight">בת 57 ונראית צעירה ב10 שנים אחרי מתיחת פנים</h3>
+                  <div class="flex items-center gap-[4px]">
+                     <img src="static/icons/svg icon.svg" class="w-4 h-4" alt="star" />
+                    <span class="text-sm text-[#3E3735] font-semibold">ביקורת פורים</span>
+                  </div>
+                  <div class="lg:flex flex-wrap items-center gap-2 text-sm text-[#3E3735]">
+                    <span class="b text-xs text-[#3E3735]">22/11/2025</span>
+                    <div class="flex flex-wrap items-center gap-2 mt-2 lg:mt-0">
+                      <div class="flex items-center gap-[4px]">
+                        <img src="static/icons/star.svg" class="w-4 h-4" alt="star" />
+                        <img src="static/icons/star.svg" class="w-4 h-4" alt="star" />
+                        <img src="static/icons/star.svg" class="w-4 h-4" alt="star" />
+                        <img src="static/icons/star.svg" class="w-4 h-4" alt="star" />
+                        <img src="static/icons/star.svg" class="w-4 h-4" alt="star" />
+                      </div>
+                      <span class="text-[#9A8B84] text-xs">|</span>
+                      <span class="text-xs text-[#C7B5AD]">מרוצה מהטיפול</span>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-[18px] text-[#3E3735]">
+                  כמו תמיד הבדיקה הייתה יסודית ומקצועית. עם יחס אישי ואדיבות שנותן ביטחון להמשך מעקב. תמיד עם חיוך ותחושה שהגענו תמיד הבדיקה הייתה יסודית ומקצועית.
+                  עם יחס אישי ואדיבות שנותן ביטחון להמשך מעקב. תמיד עם חיוך ותחושה שהגענו תמיד הבדיקה הייתה יסודית ומקצועית. עם יחס אישי ואדיבות שנותן ביטחון להמשך מעקב.
+                </p>
+                <a href="#" class="text-sm my-[180px] font-semibold text-[#3E3735] underline">קרא עוד</a>
+              </div>
+              <div class="lg:w-[340px] xl:w-[380px] h-[260px] lg:h-[300px] overflow-hidden rounded-xl bg-[#F0EAE7] mt-2">
+                <img src="static/images/image%2072.png" alt="after treatment" class="w-full h-full object-cover" />
+              </div>
+            </article>
+            
           </div>
         </div>
-
-
       </div>
+      
+       <!-- Mobile Filters Drawer -->
+       <div id="mobileFilters" class="fixed inset-0 z-50 hidden lg:hidden">
+         <div id="closeFiltersBackdrop" class="absolute inset-0 bg-black/40" aria-hidden="true"></div>
+         <div class="absolute right-0 top-0 h-full w-11/12 max-w-[360px] bg-white shadow-xl p-4 overflow-y-auto">
+           <div class="flex items-center justify-between">
+             <h3 class="text-[18px] font-semibold">Filters</h3>
+             <button id="closeFiltersBtn" class="p-2" aria-label="Close filters">
+               <img src="static/icons/cross small.svg" class="w-5 h-5" alt="close" />
+             </button>
+           </div>
+           <hr class="my-2 border-[#E5E1DE]" />
+
+           <!-- sort by -->
+           <div class="space-y-3 p-2">
+             <div class="flex items-center justify-between text-[18px] text-[#000000]">
+               <span>sort by</span>
+               <img src="static/icons/chevron-up.svg" class="w-5 h-5" alt="expand" />
+             </div>
+             <hr class="border-[#E5E1DE]" />
+             <div class="space-y-3 text-[18px] text-[#000000]">
+               <label class="flex items-center gap-2"><input type="radio" name="sort" checked class="accent-[#C7B5AD]"> <span>most recent</span></label>
+               <label class="flex items-center gap-2"><input type="radio" name="sort" class="accent-[#C7B5AD]"> <span>most old</span></label>
+             </div>
+           </div>
+
+           <!-- procedure name -->
+           <div class="space-y-3 p-2">
+             <div class="flex items-center justify-between text-[18px] text-[#000000]">
+               <span>procedure name</span>
+               <img src="static/icons/chevron-up.svg" class="w-5 h-5" alt="expand" />
+             </div>
+             <hr class="border-[#E5E1DE]" />
+             <div class="relative">
+               <input type="text" placeholder="Search" class="w-full rounded-md border border-[#E5E1DE] px-3 py-2 text-sm pr-9" />
+               <img src="static/icons/search.svg" class="w-5 h-5 absolute right-3 top-1/2 -translate-y-1/2" alt="search" />
+             </div>
+             <div class="space-y-3 text-[18px] text-[#000000]">
+               <label class="flex items-center gap-2"><input type="checkbox" checked class="accent-[#C7B5AD]"> <span>Botox</span></label>
+               <label class="flex items-center gap-2"><input type="checkbox" class="accent-[#C7B5AD]"> <span>Mesotherapy (35)</span></label>
+               <label class="flex items-center gap-2"><input type="checkbox" class="accent-[#C7B5AD]"> <span>Skin Booster (35)</span></label>
+               <label class="flex items-center gap-2"><input type="checkbox" class="accent-[#C7B5AD]"> <span>Hair Removal (35)</span></label>
+               <label class="flex items-center gap-2"><input type="checkbox" class="accent-[#C7B5AD]"> <span>Ultherapy (35)</span></label>
+               <label class="flex items-center gap-2"><input type="checkbox" class="accent-[#C7B5AD]"> <span>Hifu (35)</span></label>
+             </div>
+           </div>
+
+           <!-- procedure type -->
+           <div class="space-y-3 p-2">
+             <div class="flex items-center justify-between text-[18px] text-[#000000]">
+               <span>procedure type</span>
+               <img src="static/icons/chevron-down.svg" class="w-5 h-5" alt="collapse" />
+             </div>
+             <hr class="border-[#E5E1DE]" />
+             <div class="text-[18px] text-[#000000] space-y-2">
+               <label class="flex items-center gap-2"><input type="checkbox" checked class="accent-[#C7B5AD]"> <span>Botox</span></label>
+             </div>
+           </div>
+
+           <!-- price -->
+           <div class="space-y-3 p-2">
+             <div class="flex items-center justify-between text-[18px] text-[#000000]">
+               <span>price</span>
+               <img src="static/icons/Chevron-up.svg" class="w-5 h-5" alt="expand" />
+             </div>
+             <hr class="border-[#E5E1DE]" />
+             <div class="space-y-2 text-xs text-gray-600">
+               <div class="flex items-center gap-2">
+                 <input type="range" min="0" max="1000" value="500" class="w-full accent-[#C7B5AD]" />
+               </div>
+               <div class="flex justify-between text-[11px] text-[#3E3735]">
+                 <span>0</span>
+                 <span>200</span>
+                 <span>500</span>
+                 <span>+10,000</span>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
     </section>
 
     <script>
