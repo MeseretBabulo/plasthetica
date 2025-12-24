@@ -135,8 +135,11 @@
       </div>
 
       <!-- Categories carousel -->
-      <div class="mt-[24px] lg:mt-[60px] relative lg:mx-[220px]">
-        <div id="av-categories" class="flex gap-x-[16px] overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 cursor-pointer">
+      <div class="flex items-center mt-[24px] lg:mt-[60px] relative lg:mx-[220px]">
+        <div class="flex items-center pl-1">
+          <button class="flex w-8 h-8 items-center justify-center rounded-full bg-white shadow" aria-label="Scroll left" data-scroll-left="#av-categories">&#x2039;</button>
+        </div>
+        <div id="av-categories" class="flex gap-x-[16px] overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 cursor-pointer no-scrollbar">
           <!-- category chip --> 
           <div class=" flex flex-col items-center snap-start">
             <div class="w-[105px] h-[105px] rounded-full overflow-hidden ring-1 ring-[#E5E1DE]">
@@ -193,10 +196,8 @@
             <span class="text-xs mt-1">All</span>
           </div>
         </div>
-        <div class="absolute inset-y-0 left-0 flex items-center pl-0">
-          <button class="flex w-8 h-8 items-center justify-center rounded-full bg-white shadow" aria-label="Scroll left" data-scroll-left="#av-categories">&#x2039;</button>
-        </div>
-        <div class="absolute inset-y-0 right-0 flex items-center pr-1">
+        
+        <div class="flex items-center pr-1">
           <button class="flex w-8 h-8 items-center justify-center rounded-full bg-white shadow" aria-label="Scroll right" data-scroll-right="#av-categories">&#x203A;</button>
         </div>
       </div>
@@ -239,10 +240,10 @@
            <hr class="my-2 border-[#E5E1DE]" />
 
            <!-- sort by -->
-           <div class="space-y-3 p-2">
+           <div class="space-y-3 p-2" data-filter-section>
              <div class="flex items-center justify-between text-[18px] text-[#000000]">
                <span>sort by</span>
-               <img src="static/icons/chevron-up.svg" class="w-5 h-5" alt="expand" />
+               <img src="static/icons/chevron-up.svg" class="w-5 h-5 cursor-pointer" alt="expand" />
              </div>
              <hr class="border-[#E5E1DE]" />
              <div class="space-y-3 text-[18px] text-[#000000]">
@@ -250,12 +251,12 @@
                <label class="flex items-center gap-2"><input type="radio" name="sort" class="accent-[#C7B5AD]"> <span>most old</span></label>
              </div>
            </div>
-
+           <hr>
            <!-- procedure name -->
-           <div class="space-y-3 p-2">
+           <div class="space-y-3 p-2" data-filter-section>
              <div class="flex items-center justify-between text-[18px] text-[#000000]">
                <span>procedure name</span>
-               <img src="static/icons/chevron-up.svg" class="w-5 h-5" alt="expand" />
+               <img src="static/icons/chevron-up.svg" class="w-5 h-5 cursor-pointer" alt="expand" />
              </div>
              <hr class="border-[#E5E1DE]" />
              <div class="relative">
@@ -271,24 +272,24 @@
                <label class="flex items-center gap-2"><input type="checkbox" class="accent-[#C7B5AD]"> <span>Hifu (35)</span></label>
              </div>
            </div>
-
+           <hr>
            <!-- procedure type -->
-           <div class="space-y-3 p-2">
+           <div class="space-y-3 p-2" data-filter-section>
              <div class="flex items-center justify-between text-[18px] text-[#000000]">
                <span>procedure type</span>
-               <img src="static/icons/chevron-down.svg" class="w-5 h-5" alt="collapse" />
+               <img src="static/icons/chevron-up.svg" class="w-5 h-5 cursor-pointer" alt="collapse" />
              </div>
              <hr class="border-[#E5E1DE]" />
              <div class="text-[18px] text-[#000000] space-y-2">
                <label class="flex items-center gap-2"><input type="checkbox" checked class="accent-[#C7B5AD]"> <span>Botox</span></label>
              </div>
            </div>
-
+           <hr>
            <!-- price -->
-           <div class="space-y-3 p-2">
+           <div class="space-y-3 p-2" data-filter-section>
              <div class="flex items-center justify-between text-[18px] text-[#000000]">
                <span>price</span>
-               <img src="static/icons/Chevron-up.svg" class="w-5 h-5" alt="expand" />
+               <img src="static/icons/Chevron-up.svg" class="w-5 h-5 cursor-pointer" alt="expand" />
              </div>
              <hr class="border-[#E5E1DE]" />
              <div class="space-y-2 text-xs text-gray-600">
@@ -303,6 +304,7 @@
                </div>
              </div>
            </div>
+           <hr>
          </div>
        </div>
  
@@ -310,12 +312,13 @@
       <!-- Content & Filters on Desktop -->
       <div class="mt-[24px] lg:mt-[60px] lg:flex lg:items-start lg:gap-8">
                 <!-- Filters -->
-        <aside class="hidden border border-[#E5E1DE] rounded-xl lg:block w-[345px] h-[860px]" >
+        <aside class="hidden border border-[#E5E1DE] rounded-xl lg:block w-[345px]" >
           <div class="sticky top-4 space-y-4">
-            <div class="p-4 bg-white space-y-3">
+            <!-- sort by -->
+            <div class="p-4 bg-white space-y-3" data-filter-section>
               <div class="flex items-center justify-between text-[18px]  text-[#000000]">
                 <span>sort by</span>
-                <img src="static/icons/chevron-up.svg" class="w-5 h-5" />
+                <img src="static/icons/chevron-up.svg" class="w-5 h-5 cursor-pointer" />
               </div>
               <hr class="border-[#E5E1DE]" />
               <div class="space-y-3 text-[18px] text-[#000000]">
@@ -323,11 +326,12 @@
                 <label class="flex items-center gap-2"><input type="radio" name="sort" class="accent-[#C7B5AD]"> <span>most old</span></label>
               </div>
             </div>
-
-            <div class="px-4 bg-white space-y-3">
+            <hr>
+            <!-- procedure name -->
+            <div class="px-4 bg-white space-y-3" data-filter-section>
               <div class="flex items-center justify-between text-[18px]  text-[#000000]">
                 <span>procedure name</span>
-                <img src="static/icons/chevron-up.svg" class="w-5 h-5" />
+                <img src="static/icons/chevron-up.svg" class="w-5 h-5 cursor-pointer" />
               </div>
               <hr class="border-[#E5E1DE]" />
               <div class="relative">
@@ -343,22 +347,24 @@
                 <label class="flex items-center gap-2"><input type="checkbox" class="accent-[#C7B5AD]"> <span>Hifu (35)</span></label>
               </div>
             </div>
-
-            <div class="px-4 bg-white space-y-3">
+            <hr>
+            <!-- procedure type -->
+            <div class="px-4 bg-white space-y-3" data-filter-section>
               <div class="flex items-center justify-between text-[18px]  text-[#000000]">
                 <span>procedure type</span>
-                <img src="static/icons/chevron-down.svg" class="w-5 h-5" />
+                <img src="static/icons/chevron-up.svg" class="w-5 h-5 cursor-pointer" />
               </div>
               <hr class="border-[#E5E1DE]" />
               <div class="text-[18px] text-[#000000] space-y-2">
                 <label class="flex items-center gap-2"><input type="checkbox" checked class="accent-[#C7B5AD]"> <span>Botox</span></label>
               </div>
             </div>
-
-            <div class="px-4 bg-white space-y-3">
+            <hr>
+            <!-- price -->
+            <div class="px-4 bg-white space-y-3" data-filter-section>
               <div class="flex items-center justify-between text-[18px] text-[#000000]">
                 <span>price</span>
-               <img src="static/icons/Chevron-up.svg" class="w-5 h-5" />
+               <img src="static/icons/Chevron-up.svg" class="w-5 h-5 cursor-pointer" />
               </div>
               <hr class="border-[#E5E1DE]" />
               <div class="space-y-2 text-xs text-gray-600">
@@ -373,8 +379,10 @@
                 </div>
               </div>
             </div>
+            <hr>
           </div>
         </aside>
+
         <!-- Cards -->
         <div class="w-full lg:flex-1 grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- repeatable card -->
@@ -528,6 +536,45 @@
         if (closeFiltersBtn) closeFiltersBtn.addEventListener('click', closeFilters);
         if (closeBackdrop) closeBackdrop.addEventListener('click', closeFilters);
         document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeFilters(); });
+
+        // Toggle filter accordions and swap chevron icons
+        function initFilterAccordions() {
+          var sections = document.querySelectorAll('[data-filter-section]');
+          var iconUp = 'static/icons/Chevron-up.svg';
+          var iconDown = 'static/icons/chevron-down.svg';
+
+          sections.forEach(function(section) {
+            var headerRow = section.firstElementChild;
+            if (!headerRow) return;
+            var toggleImg = headerRow.querySelector('img');
+            if (!toggleImg) return;
+
+            function setCollapsed(collapsed) {
+              Array.from(section.children).forEach(function(child, idx) {
+                if (idx === 0) return;
+                child.classList.toggle('hidden', collapsed);
+              });
+              toggleImg.src = collapsed ? iconDown : iconUp;
+              toggleImg.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+            }
+
+            headerRow.addEventListener('click', function() {
+              var isExpanded = toggleImg.getAttribute('aria-expanded') !== 'false';
+              setCollapsed(isExpanded);
+            });
+
+            toggleImg.addEventListener('click', function(e) {
+              e.stopPropagation();
+              var isExpanded = toggleImg.getAttribute('aria-expanded') !== 'false';
+              setCollapsed(isExpanded);
+            });
+
+            toggleImg.setAttribute('aria-expanded', 'true');
+          });
+        }
+
+        initFilterAccordions();
+        
 
       });
     </script>
