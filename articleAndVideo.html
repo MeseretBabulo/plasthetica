@@ -246,8 +246,12 @@
               </div>
               <hr class="border-[#E5E1DE]" />
               <div class="space-y-2 text-xs text-gray-600">
-                <div class="flex items-center gap-2">
-                  <input type="range" min="0" max="1000" value="500" class="w-full accent-[#C7B5AD] " />
+                <!-- Dual range slider (mobile) -->
+                <div class="relative w-full h-8">
+                  <div class="absolute top-1/2 w-full h-2 bg-[#F3EFEC] rounded-full -translate-y-1/2"></div>
+                  <div id="avgPriceRangeFillMobile" class="absolute top-1/2 h-2 bg-[#D8C6BE] rounded-full -translate-y-1/2"></div>
+                  <input id="avgPriceMinRangeMobile" type="range" min="0" max="10000" value="200" class="absolute w-full appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border [&::-webkit-slider-thumb]:border-[#D8C6BE]" />
+                  <input id="avgPriceMaxRangeMobile" type="range" min="0" max="10000" value="500" class="absolute w-full appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border [&::-webkit-slider-thumb]:border-[#D8C6BE]" />
                 </div>
                 <div class="flex justify-between text-[11px] text-[#3E3735]">
                   <span>0</span>
@@ -385,8 +389,12 @@
               </div>
               <hr class="border-[#E5E1DE]" />
               <div class="space-y-2 text-xs text-gray-600">
-                <div class="flex items-center gap-2">
-                  <input type="range" min="0" max="1000" value="500" class="w-full accent-[#C7B5AD] " />
+                <!-- Dual range slider (mobile) -->
+                <div class="relative w-full h-8">
+                  <div class="absolute top-1/2 w-full h-2 bg-[#F3EFEC] rounded-full -translate-y-1/2"></div>
+                  <div id="beautyRangeFillMobile" class="absolute top-1/2 h-2 bg-[#D8C6BE] rounded-full -translate-y-1/2"></div>
+                  <input id="beautyMinRangeMobile" type="range" min="0" max="100" value="20" class="absolute w-full appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border [&::-webkit-slider-thumb]:border-[#D8C6BE]" />
+                  <input id="beautyMaxRangeMobile" type="range" min="0" max="100" value="75" class="absolute w-full appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border [&::-webkit-slider-thumb]:border-[#D8C6BE]" />
                 </div>
                 <div class="flex justify-between text-[11px] text-[#3E3735]">
                   <span>0%</span>
@@ -406,6 +414,9 @@
                 <!-- Filters -->
         <aside class="hidden border border-[#E5E1DE] rounded-xl lg:block w-[345px]" >
           <div class="sticky top-4 space-y-4">
+
+            
+
              <!--Average Price -->
             <div class="px-4 bg-white space-y-3" data-filter-section>
               <div class="flex items-center justify-between text-[18px] text-[#000000]">
@@ -414,8 +425,15 @@
               </div>
               <hr class="border-[#E5E1DE]" />
               <div class="space-y-2 text-xs text-gray-600">
-                <div class="flex items-center gap-2">
-                  <input type="range" min="0" max="1000" value="500" class="w-full accent-[#C7B5AD] " />
+                <!-- Dual range slider (desktop) -->
+                <div class="relative w-full h-8">
+                  <div class="absolute top-1/2 w-full h-2 bg-[#F3EFEC] rounded-full -translate-y-1/2"></div>
+                  <div id="avgPriceRangeFillDesktop" class="absolute top-1/2 h-2 bg-[#D8C6BE] rounded-full -translate-y-1/2"></div>
+
+                  <input id="avgPriceMinRangeDesktop" type="range" min="0" max="10000" value="200" class="absolute w-full appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border [&::-webkit-slider-thumb]:border-[#D8C6BE]" />
+
+                  <input id="avgPriceMaxRangeDesktop" type="range" min="0" max="10000" value="800" class="absolute w-full appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border [&::-webkit-slider-thumb]:border-[#D8C6BE]" />
+                  
                 </div>
                 <div class="flex justify-between text-[11px] text-[#3E3735]">
                   <span>0</span>
@@ -554,8 +572,12 @@
               </div>
               <hr class="border-[#E5E1DE]" />
               <div class="space-y-2 text-xs text-gray-600">
-                <div class="flex items-center gap-2">
-                  <input type="range" min="0" max="1000" value="500" class="w-full accent-[#C7B5AD] " />
+                <!-- Dual range slider (desktop) -->
+                <div class="relative w-full h-8">
+                  <div class="absolute top-1/2 w-full h-2 bg-[#F3EFEC] rounded-full -translate-y-1/2"></div>
+                  <div id="beautyRangeFillDesktop" class="absolute top-1/2 h-2 bg-[#D8C6BE] rounded-full -translate-y-1/2"></div>
+                  <input id="beautyMinRangeDesktop" type="range" min="0" max="100" value="20" class="absolute w-full appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border [&::-webkit-slider-thumb]:border-[#D8C6BE]" />
+                  <input id="beautyMaxRangeDesktop" type="range" min="0" max="100" value="75" class="absolute w-full appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border [&::-webkit-slider-thumb]:border-[#D8C6BE]" />
                 </div>
                 <div class="flex justify-between text-[11px] text-[#3E3735]">
                   <span>0%</span>
@@ -760,7 +782,57 @@
         }
 
         initFilterAccordions();
-        
+
+
+      // Beauty value dual-range sliders (mobile + desktop)
+      function setupDualRange(minInput, maxInput, fillEl, minGap, maxValue) {
+        if (!minInput || !maxInput || !fillEl) return;
+        function update() {
+          let min = parseInt(minInput.value);
+          let max = parseInt(maxInput.value);
+          if (max - min < minGap) {
+            if (this === minInput) {
+              minInput.value = Math.max(0, max - minGap);
+            } else {
+              maxInput.value = Math.min(maxValue, min + minGap);
+            }
+            min = parseInt(minInput.value);
+            max = parseInt(maxInput.value);
+          }
+          const minPercent = (min / maxValue) * 100;
+          const maxPercent = (max / maxValue) * 100;
+          fillEl.style.left = minPercent + "%";
+          fillEl.style.width = (maxPercent - minPercent) + "%";
+        }
+        minInput.addEventListener("input", update);
+        maxInput.addEventListener("input", update);
+        update.call(minInput);
+      }
+
+      // Initialize beauty sliders for mobile
+      const beautyMinRangeMobile = document.getElementById("beautyMinRangeMobile");
+      const beautyMaxRangeMobile = document.getElementById("beautyMaxRangeMobile");
+      const beautyRangeFillMobile = document.getElementById("beautyRangeFillMobile");
+      setupDualRange(beautyMinRangeMobile, beautyMaxRangeMobile, beautyRangeFillMobile, 5, 100);
+
+      // Initialize beauty sliders for desktop
+      const beautyMinRangeDesktop = document.getElementById("beautyMinRangeDesktop");
+      const beautyMaxRangeDesktop = document.getElementById("beautyMaxRangeDesktop");
+      const beautyRangeFillDesktop = document.getElementById("beautyRangeFillDesktop");
+      setupDualRange(beautyMinRangeDesktop, beautyMaxRangeDesktop, beautyRangeFillDesktop, 5, 100);
+
+      // Initialize average price sliders (mobile)
+      const avgPriceMinRangeMobile = document.getElementById("avgPriceMinRangeMobile");
+      const avgPriceMaxRangeMobile = document.getElementById("avgPriceMaxRangeMobile");
+      const avgPriceRangeFillMobile = document.getElementById("avgPriceRangeFillMobile");
+      setupDualRange(avgPriceMinRangeMobile, avgPriceMaxRangeMobile, avgPriceRangeFillMobile, 200, 10000);
+
+      // Initialize average price sliders (desktop)
+      const avgPriceMinRangeDesktop = document.getElementById("avgPriceMinRangeDesktop");
+      const avgPriceMaxRangeDesktop = document.getElementById("avgPriceMaxRangeDesktop");
+      const avgPriceRangeFillDesktop = document.getElementById("avgPriceRangeFillDesktop");
+      setupDualRange(avgPriceMinRangeDesktop, avgPriceMaxRangeDesktop, avgPriceRangeFillDesktop, 200, 10000);
+            
 
       });
     </script>
