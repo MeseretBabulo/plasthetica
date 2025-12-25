@@ -202,11 +202,11 @@
         </div>
       </div>
 
-      <!-- Tags / results -->
+      <!-- Tags / Search results -->
        <section class="mt-[24px] lg:mt-[60px]">
         <div class="flex items-center justify-between">
           <span class="text-[18px] text-gray-600">results 34 <span class="font-bold">Face</span></span>
-          <button id="openFiltersBtn" aria-expanded="false" class="lg:hidden flex items-center gap-2 text-[16px] text-[#3E3735] border border-[#E5E1DE] rounded-full px-3 py-1 fixed bottom-4 right-4 z-50">
+          <button id="toggleFiltersBtn" aria-expanded="false" class="lg:hidden flex items-center gap-2 text-[16px] text-[#3E3735] border border-[#E5E1DE] rounded-full px-3 py-1 fixed bottom-4 right-4 z-50 bg-white shadow-sm">
             <img src="static/icons/filter.svg" class="w-5 h-5" alt="filters" />
             Filters
           </button>
@@ -227,195 +227,26 @@
       </div>
        </section>
 
-       <!-- Mobile Filters Drawer -->
-       <div id="mobileFilters" class="fixed inset-0 z-50 hidden lg:hidden">
-         <div id="closeFiltersBackdrop" class="absolute inset-0 bg-black/40" aria-hidden="true"></div>
-         <div class="absolute right-0 top-0 h-full w-11/12 max-w-[360px] bg-white shadow-xl p-4 overflow-y-auto">
-           <div class="flex items-center justify-between">
-             <h3 class="text-[18px] font-semibold">Filters</h3>
-             <button id="closeFiltersBtn" class="p-2" aria-label="Close filters">
-               <img src="static/icons/cross small.svg" class="w-5 h-5" alt="close" />
-             </button>
-           </div>
-           <hr class="my-2 border-[#E5E1DE]" />
-             <!--Average Price -->
-            <div class="px-4 bg-white space-y-3" data-filter-section>
-              <div class="flex items-center justify-between text-[18px] text-[#000000]">
-                <span>average price</span>
-               <img src="static/icons/Chevron-up.svg" class="w-5 h-5 cursor-pointer" />
-              </div>
-              <hr class="border-[#E5E1DE]" />
-              <div class="space-y-2 text-xs text-gray-600">
-                <!-- Dual range slider (mobile) -->
-                <div class="relative w-full h-8">
-                  <div class="absolute top-1/2 w-full h-2 bg-[#F3EFEC] rounded-full -translate-y-1/2"></div>
-                  <div id="avgPriceRangeFillMobile" class="absolute top-1/2 h-2 bg-[#D8C6BE] rounded-full -translate-y-1/2"></div>
-                  <input id="avgPriceMinRangeMobile" type="range" min="0" max="10000" value="200" class="absolute w-full appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border [&::-webkit-slider-thumb]:border-[#D8C6BE]" />
-                  <input id="avgPriceMaxRangeMobile" type="range" min="0" max="10000" value="500" class="absolute w-full appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border [&::-webkit-slider-thumb]:border-[#D8C6BE]" />
-                </div>
-                <div class="flex justify-between text-[11px] text-[#3E3735]">
-                  <span>0</span>
-                  <span>200</span>
-                  <span>500</span>
-                  <span>+10,000</span>
-                </div>
-              </div>
-            </div>
-            <hr>
-             <!-- sort by -->
-            <div class="p-4 bg-white space-y-3" data-filter-section>
-              <div class="flex items-center justify-between text-[18px]  text-[#000000]">
-                <span>sort by</span>
-                <img src="static/icons/chevron-up.svg" class="w-5 h-5 cursor-pointer" />
-              </div>
-              <hr class="border-[#E5E1DE]" />
-              <div class="space-y-3 text-[18px] text-[#000000]">
-
-                <label class="flex items-center gap-2"><input type="radio" name="sort" checked class="accent-[#C7B5AD]" > <span>highest number of reviews</span></label>
-
-                <label class="flex items-center gap-2"><input type="radio" name="sort" class="accent-[#C7B5AD]"> <span>lowest number of reviews</span></label>
-
-                <label class="flex items-center gap-2"><input type="radio" name="sort" class="accent-[#C7B5AD]"> <span>highest average cost</span></label>
-
-                <label class="flex items-center gap-2"><input type="radio" name="sort" class="accent-[#C7B5AD]"> <span>lowest average cost</span></label>
-
-              </div>
-            </div>
-            <hr>
-            <!-- procedure type -->
-            <div class="px-4 bg-white space-y-3" data-filter-section>
-              <div class="flex items-center justify-between text-[18px]  text-[#000000]">
-                <span>procedure type</span>
-                <img src="static/icons/chevron-up.svg" class="w-5 h-5 cursor-pointer" />
-              </div>
-              <hr class="border-[#E5E1DE]" />
-              <div class="text-[18px] text-[#000000] space-y-2">
-
-                <label class="flex items-center gap-2"><input type="checkbox" checked class="accent-[#C7B5AD]"> <span>non-surgical</span></label>
-
-                <label class="flex items-center gap-2"><input type="checkbox" checked class="accent-[#C7B5AD]"> <span>surgical</span></label>
-
-              </div>
-            </div>
-           <hr>
-            <!-- treatment type -->
-            <div class="p-4 bg-white space-y-3" data-filter-section>
-              <div class="flex items-center justify-between text-[18px]  text-[#000000]">
-                <span>treatment type</span>
-                <img src="static/icons/chevron-up.svg" class="w-5 h-5 cursor-pointer" />
-              </div>
-              <hr class="border-[#E5E1DE]" />
-              <div class="text-[18px] text-[#000000] space-y-2">
-
-                <label class="flex items-center gap-2"><input type="checkbox" checked class="accent-[#C7B5AD]"> <span>injectables</span></label>
-
-                <label class="flex items-center gap-2"><input type="checkbox" checked class="accent-[#C7B5AD]"> <span>medical device</span></label>
-
-                <label class="flex items-center gap-2"><input type="checkbox" checked class="accent-[#C7B5AD]"> <span>topical</span></label>
-
-              </div>
-            </div>
-            <hr>
-            <!-- injectable type -->
-            <div class="px-4 bg-white space-y-3" data-filter-section>
-              <div class="flex items-center justify-between text-[18px]  text-[#000000]">
-                <span>injectable type</span>
-                <img src="static/icons/chevron-up.svg" class="w-5 h-5 cursor-pointer" />
-              </div>
-              <hr class="border-[#E5E1DE]" />
-              <div class="text-[18px] text-[#000000] space-y-2">
-
-                <label class="flex items-center gap-2"><input type="checkbox"  class="accent-[#C7B5AD]"> <span>Botox</span></label>
-
-                <label class="flex items-center gap-2"><input type="checkbox" checked class="accent-[#C7B5AD]"> <span>Hialuronic Acid (35)</span></label>
-
-                <label class="flex items-center gap-2"><input type="checkbox" checked class="accent-[#C7B5AD]"> <span>Skin Booster (35)</span></label>
-
-                <label class="flex items-center gap-2"><input type="checkbox" checked class="accent-[#C7B5AD]"> <span>biostimulators (35)</span></label>
-
-              </div>
-            </div>
-            <hr>
-            <!-- medical device type -->
-            <div class="p-4 bg-white space-y-3" data-filter-section>
-              <div class="flex items-center justify-between text-[18px]  text-[#000000]">
-                <span>medical device type</span>
-                <img src="static/icons/chevron-up.svg" class="w-5 h-5 cursor-pointer" />
-              </div>
-              <hr class="border-[#E5E1DE]" />
-              <div class="text-[18px] text-[#000000] space-y-2">
-
-                <label class="flex items-center gap-2"><input type="checkbox" checked class="accent-[#C7B5AD]"> <span>HIFU</span></label>
-
-                <label class="flex items-center gap-2"><input type="checkbox" checked class="accent-[#C7B5AD]"> <span>RF</span></label>
-
-                <label class="flex items-center gap-2"><input type="checkbox" checked class="accent-[#C7B5AD]"> <span>BodyPump</span></label>
-
-                <label class="flex items-center gap-2"><input type="checkbox" checked class="accent-[#C7B5AD]"> <span>Laser CO2</span></label>
-
-              </div>
-            </div>
-            <hr>
-            <!-- aesthetic concern -->
-            <div class="px-4 bg-white space-y-3" data-filter-section>
-              <div class="flex items-center justify-between text-[18px]  text-[#000000]">
-                <span>aesthetic concern</span>
-                <img src="static/icons/chevron-up.svg" class="w-5 h-5 cursor-pointer" />
-              </div>
-              <hr class="border-[#E5E1DE]" />
-              <div class="relative">
-                <input type="text" placeholder="Text" class="w-full rounded-md border border-[#E5E1DE] px-3 py-2 text-sm pr-9" />
-                <img src="static/icons/search.svg" class="w-5 h-5 absolute right-3 top-1/2 -translate-y-1/2 text-gray-500" />
-              </div>
-              <div class="space-y-3 text-[18px] text-[#000000]">
-
-                <label class="flex items-center gap-2"><input type="checkbox" checked class="accent-[#C7B5AD]"> <span>Sagging Skin</span></label>
-
-                <label class="flex items-center gap-2"><input type="checkbox" class="accent-[#C7B5AD]"> <span>Pigmentation</span></label>
-
-                <label class="flex items-center gap-2"><input type="checkbox" class="accent-[#C7B5AD]"> <span>Skin Booster (35)</span></label>
-
-                <label class="flex items-center gap-2"><input type="checkbox" class="accent-[#C7B5AD]"> <span>Barcode Lips</span></label>
-
-                <label class="flex items-center gap-2"><input type="checkbox" class="accent-[#C7B5AD]"> <span>Thin Lips</span></label>
-              </div>
-            </div>
-            <hr>
-            <!-- beauty value -->
-            <div class="p-4 bg-white space-y-3" data-filter-section>
-              <div class="flex items-center justify-between text-[18px] text-[#000000]">
-                <span>beauty value</span>
-               <img src="static/icons/Chevron-up.svg" class="w-5 h-5 cursor-pointer" />
-              </div>
-              <hr class="border-[#E5E1DE]" />
-              <div class="space-y-2 text-xs text-gray-600">
-                <!-- Dual range slider (mobile) -->
-                <div class="relative w-full h-8">
-                  <div class="absolute top-1/2 w-full h-2 bg-[#F3EFEC] rounded-full -translate-y-1/2"></div>
-                  <div id="beautyRangeFillMobile" class="absolute top-1/2 h-2 bg-[#D8C6BE] rounded-full -translate-y-1/2"></div>
-                  <input id="beautyMinRangeMobile" type="range" min="0" max="100" value="20" class="absolute w-full appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border [&::-webkit-slider-thumb]:border-[#D8C6BE]" />
-                  <input id="beautyMaxRangeMobile" type="range" min="0" max="100" value="75" class="absolute w-full appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border [&::-webkit-slider-thumb]:border-[#D8C6BE]" />
-                </div>
-                <div class="flex justify-between text-[11px] text-[#3E3735]">
-                  <span>0%</span>
-                  <span>20%</span>
-                  <span>75%</span>
-                  <span>100%</span>
-                </div>
-              </div>
-            </div>
-           <hr>
-         </div>
-       </div>
- 
-
-      <!-- Content & Filters on Desktop -->
-      <div class="mt-[24px] lg:mt-[60px] lg:flex lg:items-start lg:gap-8">
+      <!-- Content & Filters  -->
+      <div class=" mt-[24px] lg:mt-[60px] lg:flex lg:items-start lg:gap-8">
                 <!-- Filters -->
-        <aside class="hidden border border-[#E5E1DE] rounded-xl lg:block w-[345px]" >
-          <div class="sticky top-4 space-y-4">
+        <!-- Mobile backdrop for drawer -->
+        <div id="filtersBackdrop" class="fixed inset-0 bg-black/40 hidden lg:hidden z-40"></div>
 
-            
+        <aside id="filtersPanel" class="border border-[#E5E1DE] w-3/4 lg:w-[345px]
+          fixed lg:static inset-y-0 right-0 h-full lg:h-auto z-50 lg:z-auto
+          bg-white lg:bg-transparent shadow-xl lg:shadow-none
+          rounded-l-xl lg:rounded-xl
+          transform transition-transform duration-300
+          translate-x-full lg:translate-x-0 overflow-y-auto" >
+          <div class="sticky top-4 space-y-4">
+            <!-- cross button -->
+            <div class="lg:hidden flex justify-end px-4 pt-4">
+              <button id="closeFiltersPanelBtn" aria-label="Close filters" class="p-2">
+                <img src="static/icons/cross big.svg" class="w-5 h-5" alt="close filters" />
+              </button>
+            </div>
+
 
              <!--Average Price -->
             <div class="px-4 bg-white space-y-3" data-filter-section>
@@ -669,7 +500,6 @@
        
         </div>
 
-
       </div>
     </section>
 
@@ -717,34 +547,6 @@
           });
         }
 
-        // Mobile filters open/close
-        var openFiltersBtn = document.getElementById('openFiltersBtn');
-        var mobileFilters = document.getElementById('mobileFilters');
-        var closeFiltersBtn = document.getElementById('closeFiltersBtn');
-        var closeBackdrop = document.getElementById('closeFiltersBackdrop');
-
-        function openFilters(){
-          if (!mobileFilters) return;
-          mobileFilters.classList.remove('hidden');
-          document.body.style.overflow = 'hidden';
-          if (openFiltersBtn) openFiltersBtn.setAttribute('aria-expanded','true');
-        }
-
-        function closeFilters(){
-          if (!mobileFilters) return;
-          mobileFilters.classList.add('hidden');
-          document.body.style.overflow = '';
-          if (openFiltersBtn) openFiltersBtn.setAttribute('aria-expanded','false');
-        }
-
-        if (openFiltersBtn) {
-          openFiltersBtn.setAttribute('aria-controls','mobileFilters');
-          openFiltersBtn.addEventListener('click', openFilters);
-        }
-        if (closeFiltersBtn) closeFiltersBtn.addEventListener('click', closeFilters);
-        if (closeBackdrop) closeBackdrop.addEventListener('click', closeFilters);
-        document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeFilters(); });
-
         // Toggle filter accordions and swap chevron icons
         function initFilterAccordions() {
           var sections = document.querySelectorAll('[data-filter-section]');
@@ -783,6 +585,68 @@
 
         initFilterAccordions();
 
+        // Mobile toggle for responsive filters panel
+        var toggleFiltersBtn = document.getElementById('toggleFiltersBtn');
+        var filtersPanel = document.getElementById('filtersPanel');
+        var filtersBackdrop = document.getElementById('filtersBackdrop');
+        var closeFiltersPanelBtn = document.getElementById('closeFiltersPanelBtn');
+        if (toggleFiltersBtn && filtersPanel) {
+          toggleFiltersBtn.setAttribute('aria-controls', 'filtersPanel');
+
+          function openFiltersPanel() {
+            filtersPanel.classList.add('translate-x-0');
+            if (filtersBackdrop) filtersBackdrop.classList.remove('hidden');
+            toggleFiltersBtn.setAttribute('aria-expanded', 'true');
+            document.body.style.overflow = 'hidden';
+          }
+
+          function closeFiltersPanel() {
+            filtersPanel.classList.remove('translate-x-0');
+            if (filtersBackdrop) filtersBackdrop.classList.add('hidden');
+            toggleFiltersBtn.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+          }
+
+          function isOpen() {
+            return filtersPanel.classList.contains('translate-x-0');
+          }
+
+          toggleFiltersBtn.addEventListener('click', function(){
+            if (isOpen()) closeFiltersPanel(); else openFiltersPanel();
+          });
+
+          if (filtersBackdrop) {
+            filtersBackdrop.addEventListener('click', closeFiltersPanel);
+          }
+
+          if (closeFiltersPanelBtn) {
+            closeFiltersPanelBtn.addEventListener('click', closeFiltersPanel);
+          }
+
+          document.addEventListener('keydown', function(e){
+            if (e.key === 'Escape') closeFiltersPanel();
+          });
+
+          // Ensure desktop state is sane on resize
+          var mq = window.matchMedia('(min-width: 1024px)');
+          function handleMQ(e){
+            if (e.matches) {
+              // On desktop, panel is inline; clear mobile-only state
+              filtersPanel.classList.add('translate-x-0');
+              if (filtersBackdrop) filtersBackdrop.classList.add('hidden');
+              document.body.style.overflow = '';
+              toggleFiltersBtn.setAttribute('aria-expanded', 'true');
+            } else {
+              // On mobile, keep it closed by default
+              filtersPanel.classList.remove('translate-x-0');
+              if (filtersBackdrop) filtersBackdrop.classList.add('hidden');
+              toggleFiltersBtn.setAttribute('aria-expanded', 'false');
+            }
+          }
+          handleMQ(mq);
+          mq.addEventListener('change', handleMQ);
+        }
+
 
       // Beauty value dual-range sliders (mobile + desktop)
       function setupDualRange(minInput, maxInput, fillEl, minGap, maxValue) {
@@ -809,24 +673,11 @@
         update.call(minInput);
       }
 
-      // Initialize beauty sliders for mobile
-      const beautyMinRangeMobile = document.getElementById("beautyMinRangeMobile");
-      const beautyMaxRangeMobile = document.getElementById("beautyMaxRangeMobile");
-      const beautyRangeFillMobile = document.getElementById("beautyRangeFillMobile");
-      setupDualRange(beautyMinRangeMobile, beautyMaxRangeMobile, beautyRangeFillMobile, 5, 100);
-
       // Initialize beauty sliders for desktop
       const beautyMinRangeDesktop = document.getElementById("beautyMinRangeDesktop");
       const beautyMaxRangeDesktop = document.getElementById("beautyMaxRangeDesktop");
       const beautyRangeFillDesktop = document.getElementById("beautyRangeFillDesktop");
       setupDualRange(beautyMinRangeDesktop, beautyMaxRangeDesktop, beautyRangeFillDesktop, 5, 100);
-
-      // Initialize average price sliders (mobile)
-      const avgPriceMinRangeMobile = document.getElementById("avgPriceMinRangeMobile");
-      const avgPriceMaxRangeMobile = document.getElementById("avgPriceMaxRangeMobile");
-      const avgPriceRangeFillMobile = document.getElementById("avgPriceRangeFillMobile");
-      setupDualRange(avgPriceMinRangeMobile, avgPriceMaxRangeMobile, avgPriceRangeFillMobile, 200, 10000);
-
       // Initialize average price sliders (desktop)
       const avgPriceMinRangeDesktop = document.getElementById("avgPriceMinRangeDesktop");
       const avgPriceMaxRangeDesktop = document.getElementById("avgPriceMaxRangeDesktop");
