@@ -206,7 +206,7 @@
        <section class="mt-[24px] lg:mt-[60px]">
         <div class="flex items-center justify-between">
           <span class="text-[18px] text-gray-600">results 34 <span class="font-bold">Face</span></span>
-          <button id="toggleFiltersBtn" aria-expanded="false" class="lg:hidden flex items-center gap-2 text-[16px] text-[#3E3735] border border-[#E5E1DE] rounded-full px-3 py-1 fixed bottom-4 right-4 z-50 bg-white shadow-sm">
+          <button id="toggleFiltersBtn" aria-expanded="false" class="lg:hidden flex items-center gap-2 text-[16px] text-[#3E3735] border border-[#E5E1DE] rounded-full px-3 py-1 fixed bottom-20 right-4 z-50 bg-white shadow-sm">
             <img src="static/icons/filter.svg" class="w-5 h-5" alt="filters" />
             Filters
           </button>
@@ -231,7 +231,7 @@
       <div class=" mt-[24px] lg:mt-[60px] lg:flex lg:items-start lg:gap-8">
                 <!-- Filters -->
         <!-- Mobile backdrop for drawer -->
-        <div id="filtersBackdrop" class="fixed inset-0 bg-black/40 hidden lg:hidden z-40"></div>
+        <div id="filtersBackdrop" class="fixed inset-0 bg-black/40 hidden lg:hidden z-40"></div> 
 
         <aside id="filtersPanel" class="border border-[#E5E1DE] w-3/4 lg:w-[345px]
           fixed lg:static inset-y-0 right-0 h-full lg:h-auto z-50 lg:z-auto
@@ -503,6 +503,23 @@
       </div>
     </section>
 
+    <!-- Footer Icons Starts -->
+
+    <div class="lg:hidden fixed left-4 right-4 bottom-3 z-[60]" >
+    <div class="flex items-center gap-3 justify-between">
+       <a href="#consultation"class="flex-1 bg-[#3E3735] text-white text-[16px] leading-none px-4 py-3 rounded-[999px] text-center shadow-md">Schedule a consultation</a>
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/972524561231" target="_blank" rel="noopener" aria-label="WhatsApp" class="w-12 h-12 rounded-full bg-[#E4CFC6] flex items-center justify-center shadow-sm">
+          <img src="static/icons/Vector.svg"/> 
+        </a>
+        <a href="tel:0524561231" aria-label="Call" class="w-12 h-12 rounded-full bg-[#E4CFC6] flex items-center justify-center shadow-sm">
+          <img src="static/icons/phone.svg"/> 
+        </a>
+      </div>
+    </div>
+  </div>
+   <!-- Footer Icons End -->
+
     <script>
       document.addEventListener('DOMContentLoaded', function () {
 
@@ -687,6 +704,8 @@
 
       });
     </script>
+    <div class="lg:hidden h-[84px]"></div>
   </article>
+
 </body>
 </html>
