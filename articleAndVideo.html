@@ -504,8 +504,8 @@
     </section>
 
     <!-- Footer Icons Starts -->
-
-    <div class="lg:hidden fixed left-4 right-4 bottom-3 z-[60]" >
+    <div id="mobileFooterSpacer" class="lg:hidden h-[84px]"></div>
+    <div id="mobileFooterBar" class="lg:hidden fixed left-4 right-4 bottom-3 z-[60]" >
     <div class="flex items-center gap-3 justify-between">
        <a href="#consultation"class="flex-1 bg-[#3E3735] text-white text-[16px] leading-none px-4 py-3 rounded-[999px] text-center shadow-md">Schedule a consultation</a>
       <div class="flex items-center gap-3">
@@ -607,6 +607,10 @@
         var filtersPanel = document.getElementById('filtersPanel');
         var filtersBackdrop = document.getElementById('filtersBackdrop');
         var closeFiltersPanelBtn = document.getElementById('closeFiltersPanelBtn');
+
+        const mobileFooterBar = document.getElementById('mobileFooterBar');
+        const mobileFooterSpacer = document.getElementById('mobileFooterSpacer');
+
         if (toggleFiltersBtn && filtersPanel) {
           toggleFiltersBtn.setAttribute('aria-controls', 'filtersPanel');
 
@@ -615,6 +619,9 @@
             if (filtersBackdrop) filtersBackdrop.classList.remove('hidden');
             toggleFiltersBtn.setAttribute('aria-expanded', 'true');
             document.body.style.overflow = 'hidden';
+            // hide mobile footer while filters are open
+            if (mobileFooterBar) mobileFooterBar.style.display = 'none';
+            if (mobileFooterSpacer) mobileFooterSpacer.style.display = 'none';
           }
 
           function closeFiltersPanel() {
@@ -622,6 +629,9 @@
             if (filtersBackdrop) filtersBackdrop.classList.add('hidden');
             toggleFiltersBtn.setAttribute('aria-expanded', 'false');
             document.body.style.overflow = '';
+            // restore mobile footer visibility
+            if (mobileFooterBar) mobileFooterBar.style.display = '';
+            if (mobileFooterSpacer) mobileFooterSpacer.style.display = '';
           }
 
           function isOpen() {
