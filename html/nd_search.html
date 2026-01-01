@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <style>
+        /* Map must have explicit height */
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="bg-white w-full max-w-415! mx-auto">
+
+        <div class="my-10 px-4 lg:px-50.25!">
+            <div class="w-full flex flex-row mb-15!">
+                <div class="flex flex-col justify-center items-center w-full mx-auto">
+                    <h1 class="font-bold text-[24px] lg:text-[40px]">
+                        Botox in sharon area
+                    </h1>
+                    <p>
+                        find your best doctor and clinic for your needs
+                    </p>
+                </div>
+                <div class="flex gap-x-4!">
+                    <a href="">
+                        <img src=".//website_doctors_list/static/icons/share.svg" alt="Share icon" class="w-5 h-5" />
+                    </a>
+                    <a href="">
+                        <img src=".//website_doctors_list/static/icons/heart.svg" alt="Heart icon" class="w-5 h-5" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-full">
+                <div class="flex justify-between">
+                    <h4 class="flex flex-row justify-between text-[22px] gap-x-4">
+                        <span class="text-[#3E3735] font-semibold!">Face</span>
+                        <span> result 34</span>
+                    </h4>
+                    <img src="./website_doctors_list/static//icons/filter.svg" alt="Filter icon"
+                        class="w-5 h-5 lg:hidden" />
+                </div>
+                <div class="flex justify-between!">
+                    <div class="hidden lg:flex lg:flex-wrap lg:gap-x-2! lg:mt-2">
+                        <div class="flex flex-row justify-between bg-[#E4CFC6]! px-3! py-1! rounded-3xl w-fit gap-x-2">
+                            <span>Item</span>
+                            <span>x</span>
+                        </div>
+                        <div class="flex flex-row justify-between bg-[#E4CFC6]! px-3! py-1! rounded-3xl w-fit gap-x-2">
+                            <span>Item</span>
+                            <span>x</span>
+                        </div>
+                        <div class="flex flex-row justify-between bg-[#E4CFC6]! px-3! py-1! rounded-3xl w-fit gap-x-2">
+                            <span>Item</span>
+                            <span>x</span>
+                        </div>
+                        <div class="flex flex-row justify-between bg-[#E4CFC6]! px-3! py-1! rounded-3xl w-fit gap-x-2">
+                            <span>Item</span>
+                            <span>x</span>
+                        </div>
+                        <div class="flex flex-row justify-between bg-[#E4CFC6]! px-3! py-1! rounded-3xl w-fit gap-x-2">
+                            <span>Item</span>
+                            <span>x</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <a href="" class="flex flex-row justify-between items-center gap-x-3 type=" button">
+                            <span class="underline">Clear All</span>
+                            <span class="text-sm">x</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Filter Items -->
+            <div class="w-full flex flex-col pt-9! lg:flex-row lg:justify-between! lg:gap-x-10!">
+                <div class="hidden border-none! border-[#E4CFC6]! rounded-lg lg:flex lg:w-1/4! lg:h-fit!">
+                    <div
+                        class="w-full max-w-xs bg-white rounded-lg shadow-xl border border-[#E4CFC6]! overflow-hidden mx-auto">
+                        <div class="border-b border-[#E4CFC6]!">
+                            <div id="sort-header"
+                                class="p-4 flex justify-between items-center cursor-pointer hover:bg-[#E4CFC6]! group">
+                                <h3 class="text-sm font-bold text-gray-700">Sort by</h3>
+                                <svg class="w-4 h-4 transition-transform duration-300 transform rotate-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+
+                            <div id="sort-content"
+                                class="content-transition p-0 space-y-2 border-t border-[#E4CFC6]! max-h-0 overflow-hidden">
+                                <div class="p-0 pt-0">
+                                    <label
+                                        class="flex items-center justify-start text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+
+                                        <input type="radio" name="sort"
+                                            class="form-radio h-4 w-4 border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2"
+                                            checked />
+                                        Most recent
+                                    </label>
+                                    <label
+                                        class="flex items-center justify-start text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+
+                                        <input type="radio" name="sort"
+                                            class="form-radio h-4 w-4 border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" />
+                                        Most old
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-[#E4CFC6]!">
+                            <div id="treatment-header"
+                                class="p-4 flex justify-between items-center cursor-pointer hover:bg-[#E4CFC6]! group">
+                                <h3 class="text-sm font-bold text-gray-700">Procedure name</h3>
+                                <svg class="w-4 h-4 transition-transform duration-300 transform rotate-180" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+
+                            <div id="treatment-content"
+                                class="content-transition p-4 border-t border-[#E4CFC6]! max-h-screen overflow-hidden">
+                                <div class="relative mb-4">
+                                    <input type="text" placeholder="טקסט"
+                                        class="w-full py-2 pl-3 pr-10 text-sm border border-[#E4CFC6]! rounded-lg focus:ring-[#E4CFC6]! focus:border-purple-500" />
+                                    <svg class="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                    </svg>
+                                </div>
+
+                                <div class="space-y-2 text-right">
+                                    <label
+                                        class="flex items-center justify-start text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+
+                                        <input type="checkbox"
+                                            class="form-checkbox h-4 w-4 rounded border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" />
+                                        Botox
+                                    </label>
+                                    <label
+                                        class="flex items-center justify-start text-sm gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+
+                                        <input type="checkbox"
+                                            class="form-checkbox h-4 w-4 rounded border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" />
+                                        Mesotherapy (35)
+                                    </label>
+                                    <label
+                                        class="flex items-center justify-start text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+
+                                        <input type="checkbox"
+                                            class="form-checkbox h-4 w-4 rounded border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" />
+                                        Skin Booster (35)
+                                    </label>
+                                    <label
+                                        class="flex items-center justify-start text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+
+                                        <input type="checkbox"
+                                            class="form-checkbox h-4 w-4 rounded border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" />
+                                        Hair Removal (35)
+                                    </label>
+                                    <label
+                                        class="flex items-center justify-start text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+
+                                        <input type="checkbox"
+                                            class="form-checkbox h-4 w-4 rounded border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" />
+                                        Ultherapy (35)
+                                    </label>
+                                    <label
+                                        class="flex items-center justify-start text-sm  gap-x-2 text-gray-700 cursor-pointer hover:bg-gray-50 p-1 rounded">
+
+                                        <input type="checkbox"
+                                            class="form-checkbox h-4 w-4 rounded border-[#E4CFC6]! focus:ring-[#E4CFC6]! mr-2" />
+                                        Hify (35)
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-[#E4CFC6]!">
+                            <div id="type-header"
+                                class="p-4 flex justify-between items-center cursor-pointer hover:bg-[#E4CFC6]! group">
+                                <h3 class="text-sm font-bold text-gray-700">Procedure types</h3>
+                                <svg class="w-4 h-4 transition-transform duration-300 transform rotate-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                            <div id="type-content"
+                                class="content-transition p-0 border-t border-[#E4CFC6]! max-h-0 overflow-hidden">
+                                <div class="p-4 pt-0">
+                                    <p class="text-sm text-gray-500">Procedure type...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-[#E4CFC6]!">
+                            <div id="price-header"
+                                class="p-4 flex justify-between items-center cursor-pointer hover:bg-[#E4CFC6]! group">
+                                <h3 class="text-sm font-bold text-gray-700">מחיר</h3>
+                                <svg class="w-4 h-4 transition-transform duration-300 transform rotate-180" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+
+                            <div id="price-content"
+                                class="content-transition p-4 border-t border-[#E4CFC6]! max-h-screen overflow-hidden">
+                                <div class="flex flex-col items-center p-0 space-y-6 w-full max-w-md rounded-xl">
+
+                                    <div class="relative w-full h-10 flex items-center">
+                                        <div class="absolute w-full h-1.5 bg-gray-200 rounded-full "></div>
+
+                                        <div id="slider-track" class="absolute h-1.5 bg-[#E4CFC6]! rounded-full"
+                                            style="left: 0%; right: 0%;"></div>
+
+                                        <span id="min-bubble"
+                                            class="absolute -top-7 text-xs bg-[#E4CFC6]! text-[#3E3735] px-2 py-0.5 m-5 rounded shadow whitespace-nowrap transform -translate-x-1/2 select-none">
+                                            <span><span id="min-val"></span></span>
+                                        </span>
+                                        <span id="max-bubble"
+                                            class="absolute -top-7 text-xs bg-[#E4CFC6]! text-[#3E3735] px-2 py-0.5 mt-5 -ml-5 rounded shadow whitespace-nowrap transform -translate-x-1/2 select-none">
+                                            <span><span id="max-val"></span></span>
+                                        </span>
+
+                                        <input type="range" id="min-slider" min="25" max="10000" value="25" step="1"
+                                            class="absolute w-full appearance-none bg-transparent pointer-events-none cursor-pointer focus:outline-none z-20
+        [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-gray-100 [&::-webkit-slider-thumb]:rounded-full" />
+
+                                        <input type="range" id="max-slider" min="25" max="10000" value="10000" step="1"
+                                            class="absolute w-full appearance-none bg-transparent pointer-events-none cursor-pointer focus:outline-none z-30
+        [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-gray-100 [&::-webkit-slider-thumb]:rounded-full" />
+                                    </div>
+
+                                    <!-- Ticks -->
+                                    <div class="flex justify-between w-full text-xs text-gray-600">
+                                        <span>$25</span>
+                                        <span>$2000</span>
+                                        <span>$5000</span>
+                                        <span>$10,000</span>
+                                    </div>
+
+                                    <!-- Selected range display -->
+                                    <div class="flex justify-between w-full text-sm font-medium text-gray-600">
+                                        <!-- <span><span id="min-val"></span></span>
+                    <span><span id="max-val"></span></span> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card List -->
+                <div class="w-full lg:w-1/2!">
+                    <div class="grid grid-cols-1 lg:grid-cols-1 lg:gap-x-4!">
+                        <!-- Card 1 -->
+                        <div class="bg-white p-4! mt-4! shadow-lg rounded-lg">
+                            <div class="w-full flex gap-x-6!">
+                                <div class="w-1/4!">
+                                    <img src="./website_doctors_list/static//images/doctor-profile-small.png"
+                                        alt="Doctor Image" class="min-w-24! h-24!">
+                                    <img src="./website_doctors_list/static/icons/agreement.svg" alt="Heart-Bold
+                                                    icon" class="w-8! h-11!" />
+                                </div>
+                                <div class="flex flex-col gap-y-2.5! w-full text-[#3E3735] ">
+                                    <h2 class="text-lg font-semibold ">dr. shay matlon</h2>
+                                    <p class="font-semibold">plastic surgery MD</p>
+                                    <div class="flex flex-row items-center">
+                                        <img src="./website_doctors_list/static/icons/star-bold.svg" alt="Star-Bold
+                                                    icon" class="w-4 h-4 mt-1 mr-2" />
+                                        <p class="text-sm">
+                                            4.5 | 200 Reviews
+                                        </p>
+                                    </div>
+                                    <div class="flex flex-row items-center">
+                                        <img src="./website_doctors_list/static/icons/location.svg" alt="Location
+                                                    icon" class="w-4 h-4 mt-1 mr-2" />
+                                        <p class="text-sm">
+                                            Kfar Saba <span class="ml-5">(+3)</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="flex flex-row items-center">
+                                        <div class="flex border border-[#efcfc6] rounded-r-2xl p-0.5! ">
+                                            <img src="./website_doctors_list/static/icons/offer.svg" alt="Location
+                                                    icon" class="w-4 h-4 mt-1 mr-2" />
+                                            <p class="text-sm">
+                                                special offer
+                                            </p>
+
+                                        </div>
+                                        <a href="#" class="underline ml-4 text-sm">more</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-row items-center gap-x-4 mt-9!">
+                                <a href="#"
+                                    class="flex justify-center items-center bg-[#E4CFC6] rounded-full p-2.5! w-10! h-10!">
+                                    <img src="./website_doctors_list/static/icons/whatsapp.svg" alt="Heart icon"
+                                        class="w-5 h-5" />
+                                </a>
+                                <a href="#"
+                                    class="flex justify-center items-center bg-[#E4CFC6] rounded-full p-2.5! w-10! h-10!">
+                                    <img src="./website_doctors_list/static/icons/phone.svg" alt="Heart icon"
+                                        class="w-5 h-5" />
+                                </a>
+                                <span class="text-md">
+                                    052-456-1231
+                                </span>
+                                <button class="bg-[#3e3736] text-sm  text-white px-4! py-2.5! rounded-3xl">
+                                    Send Form
+                                </button>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4! mt-4! shadow-lg rounded-lg">
+                            <div class="w-full flex gap-x-6!">
+                                <div class="w-1/4!">
+                                    <img src="./website_doctors_list/static//images/doctor-profile-small.png"
+                                        alt="Doctor Image" class="min-w-24! h-24!">
+                                    <img src="./website_doctors_list/static/icons/agreement.svg" alt="Heart-Bold
+                                                    icon" class="w-8! h-11!" />
+                                </div>
+                                <div class="flex flex-col gap-y-2.5! w-full text-[#3E3735] ">
+                                    <h2 class="text-lg font-semibold ">dr. shay matlon</h2>
+                                    <p class="font-semibold">plastic surgery MD</p>
+                                    <div class="flex flex-row items-center">
+                                        <img src="./website_doctors_list/static/icons/star-bold.svg" alt="Star-Bold
+                                                    icon" class="w-4 h-4 mt-1 mr-2" />
+                                        <p class="text-sm">
+                                            4.5 | 200 Reviews
+                                        </p>
+                                    </div>
+                                    <div class="flex flex-row items-center">
+                                        <img src="./website_doctors_list/static/icons/location.svg" alt="Location
+                                                    icon" class="w-4 h-4 mt-1 mr-2" />
+                                        <p class="text-sm">
+                                            Kfar Saba <span class="ml-5">(+3)</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="flex flex-row items-center">
+                                        <div class="flex border border-[#efcfc6] rounded-r-2xl p-0.5! ">
+                                            <img src="./website_doctors_list/static/icons/offer.svg" alt="Location
+                                                    icon" class="w-4 h-4 mt-1 mr-2" />
+                                            <p class="text-sm">
+                                                special offer
+                                            </p>
+
+                                        </div>
+                                        <a href="#" class="underline ml-4 text-sm">more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="flex flex-row items-center gap-x-4 mt-9!">
+                                <a href="#"
+                                    class="flex justify-center items-center bg-[#E4CFC6] rounded-full p-2.5! w-10! h-10!">
+                                    <img src="./website_doctors_list/static/icons/whatsapp.svg" alt="Heart icon"
+                                        class="w-5 h-5" />
+                                </a>
+                                <a href="#"
+                                    class="flex justify-center items-center bg-[#E4CFC6] rounded-full p-2.5! w-10! h-10!">
+                                    <img src="./website_doctors_list/static/icons/phone.svg" alt="Heart icon"
+                                        class="w-5 h-5" />
+                                </a>
+                                <span class="text-md">
+                                    052-456-1231
+                                </span>
+                                <button class="bg-[#3e3736] text-sm  text-white px-4! py-2.5! rounded-3xl">
+                                    Send Form
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="hidden border-none! border-[#E4CFC6]! rounded-lg lg:flex lg:w-1/4! lg:h-fit!">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const headers = document.querySelectorAll('[id$="-header"]');
+
+            headers.forEach((header) => {
+                header.addEventListener("click", function () {
+                    const contentId = this.id.replace("-header", "-content");
+                    const content = document.getElementById(contentId);
+                    const icon = this.querySelector("svg");
+
+                    if (content && icon) {
+                        const isHidden =
+                            content.classList.contains("hidden") ||
+                            content.style.maxHeight === "0px" ||
+                            content.style.maxHeight === "";
+
+                        if (isHidden) {
+                            // EXPAND
+                            content.classList.remove("p-0");    // ADD
+                            content.classList.add("p-4");       // ADD
+                            content.style.maxHeight = content.scrollHeight + "px";
+                            content.classList.remove("hidden");
+                            icon.classList.remove("rotate-0");
+                            icon.classList.add("rotate-180");
+                        } else {
+                            // COLLAPSE
+                            content.style.maxHeight = "0px";
+                            content.classList.add("p-0");       // ADD
+                            content.classList.remove("p-4");    // ADD
+                            icon.classList.remove("rotate-180");
+                            icon.classList.add("rotate-0");
+                        }
+                    }
+                });
+            });
+        });
+        // Price range slider
+        const minSlider = document.getElementById('min-slider');
+        const maxSlider = document.getElementById('max-slider');
+        const minVal = document.getElementById('min-val');
+        const maxVal = document.getElementById('max-val');
+        const track = document.getElementById('slider-track');
+
+        const MIN_RANGE = parseInt(minSlider.min);   // 25
+        const MAX_RANGE = parseInt(minSlider.max);   // 10000
+        const RANGE_SPAN = MAX_RANGE - MIN_RANGE;
+
+        function clampHandles() {
+            let min = parseInt(minSlider.value);
+            let max = parseInt(maxSlider.value);
+            if (min >= max) {
+                minSlider.value = max - 1;
+            }
+        }
+
+        function updateTrack() {
+            const min = parseInt(minSlider.value);
+            const max = parseInt(maxSlider.value);
+
+            const leftPct = ((min - MIN_RANGE) / RANGE_SPAN) * 100;
+            const rightPct = 100 - ((max - MIN_RANGE) / RANGE_SPAN) * 100;
+
+            track.style.left = leftPct + "%";
+            track.style.right = rightPct + "%";
+        }
+
+        function updateLabels() {
+            minVal.textContent = parseInt(minSlider.value);
+            maxVal.textContent = parseInt(maxSlider.value);
+        }
+
+        minSlider.addEventListener('input', updateSliders);
+        maxSlider.addEventListener('input', updateSliders);
+
+        const minBubble = document.getElementById('min-bubble');
+        const maxBubble = document.getElementById('max-bubble');
+
+        function formatUSD(n) {
+            return Number(n).toLocaleString('en-US', { maximumFractionDigits: 0 });
+        }
+
+        function updateBubbles() {
+            const min = parseInt(minSlider.value);
+            const max = parseInt(maxSlider.value);
+
+            const minPct = ((min - MIN_RANGE) / RANGE_SPAN) * 100;
+            const maxPct = ((max - MIN_RANGE) / RANGE_SPAN) * 100;
+
+            // Center bubbles over thumbs
+            minBubble.style.left = minPct + "%";
+            maxBubble.style.left = maxPct + "%";
+
+            minBubble.textContent = `$${formatUSD(min)}`;
+            maxBubble.textContent = `$${formatUSD(max)}`;
+        }
+
+        // Amend existing functions
+        function updateLabels() {
+            minVal.textContent = formatUSD(minSlider.value);
+            maxVal.textContent = formatUSD(maxSlider.value);
+        }
+
+        function updateSliders() {
+            clampHandles();
+            updateLabels();
+            updateTrack();
+            updateBubbles(); // ensure bubbles move and update text
+        }
+
+        // Initialize on load
+        updateSliders();
+    </script>
+    <script>
+        function initMap() {
+            // Location coordinates
+            const location = { lat: 45.4642, lng: 9.1900 }; // Milan
+
+            // Create map
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 12,
+                center: location,
+            });
+
+            // Create marker (pin)
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: "Milan",
+            });
+        }
+    </script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</body>
+
+</html>

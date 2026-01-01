@@ -74,6 +74,19 @@
     /* Use standard browser styles for simplicity in this example */
     /* For the exact circle/square look, consider a Tailwind plugin or custom appearance */
   }
+
+  @layer utilities {
+    /* Chrome, Safari and Opera */
+    .scrollbar-hidden::-webkit-scrollbar {
+        display: none;
+    }
+
+    .scrollbar-hidden {
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+    }
+}
+
 </style>
 
 <body>
@@ -265,6 +278,27 @@
         <button class="nav-btn next">›</button>
       </div>
 
+
+      <div class="flex gap-x-[16px] overflow-x-scroll snap-x snap-mandatory scroll-smooth pb-2 cursor-pointer scrollbar-hidden">
+        <div class="w-1/4 h-28 bg-red-300">ddd</div>
+                <div class="w-1/4 h-28 bg-red-300">ddd</div>
+                        <div class="w-1/4 h-28 bg-red-300">ddd</div>
+                                <div class="w-1/4 h-28 bg-red-300">ddd</div>
+                                        <div class="w-1/4 h-28 bg-red-300">ddd</div>
+                                                <div class="w-1/4 h-28 bg-red-300">ddd</div>
+                                                        <div class="w-1/4 h-28 bg-red-300">ddd</div>
+                                                                <div class="w-1/4 h-28 bg-red-300">ddd</div>
+                                                                        <div class="w-1/4 h-28 bg-red-300">ddd</div>
+                                                                                <div class="w-1/4 h-28 bg-red-300">ddd</div>
+                <div class="w-1/4 h-28 bg-red-300">ss</div>
+                        <div class="w-1/4 h-28 bg-red-300">aa</div>
+                                <div class="w-1/4 h-28 bg-red-300">vv</div>
+                                        <div class="w-1/4 h-28 bg-red-300">ww</div>
+                                                <div class="w-1/4 h-28 bg-red-300">tt</div>
+                                                        <div class="w-1/4 h-28 bg-red-300">qq</div>
+                                                                <div class="w-1/4 h-28 bg-red-300">ll</div>
+                                                                        <div class="w-1/4 h-28 bg-red-300">jj</div>
+      </div>
       <!-- Filter Items -->
       <div class="w-full flex flex-col pt-9! lg:flex-row lg:justify-between! lg:gap-x-10!">
         <div class="hidden border-none! border-[#E4CFC6]! rounded-lg lg:flex lg:w-1/4! lg:h-fit!">
