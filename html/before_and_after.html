@@ -90,7 +90,7 @@
 </style>
 
 <body>
-  <div class="bg-white w-full max-w-415! mx-auto">
+  <div class="bg-white min-w-299! mx-auto">
     <!-- Doctor Profile -->
     <div class="w-full bg-[#F7F2EF] min-h-111.25 p-4 lg:px-50.25">
       <div class="flex flex-row justify-end gap-x-4 mb-4 lg:mb-10">
@@ -104,10 +104,13 @@
 
       <div class="flex flex-col lg:flex-row lg:justify-between">
         <div class="flex flex-col lg:flex-row lg:gap-x-6">
-          <div class="w-full lg:w-50.25 h-auto">
-            <img src=./website_doctors_list/static/images/doctor-profile.png class="w-full h-full
-              object-cover rounded-tl-[30%] rounded-br-[30%]" alt="Doctor image" />
+
+          <!-- Updated Profile Image -->
+          <div class="w-full h-31.5! flex justify-end lg:w-50.25! lg:h-54! lg:bg-cover bg-center bg-[url(./website_doctors_list/static/images/doctor-profile.png)] bg-no-repeat rounded-tl-[30%] rounded-br-[30%] ">
+            <img src="./website_doctors_list/static/icons/agreement.svg" class="w-8! h-11!" alt="Doctor image" />
           </div>
+                      <!-- <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-52! h-54! -->
+             <!-- rounded-tl-[30%] rounded-br-[30%] " alt="Doctor image" /> -->
 
           <div>
             <div class="w-full text-center mt-4 lg:text-start">
@@ -278,27 +281,6 @@
         <button class="nav-btn next">›</button>
       </div>
 
-
-      <div class="flex gap-x-[16px] overflow-x-scroll snap-x snap-mandatory scroll-smooth pb-2 cursor-pointer scrollbar-hidden">
-        <div class="w-1/4 h-28 bg-red-300">ddd</div>
-                <div class="w-1/4 h-28 bg-red-300">ddd</div>
-                        <div class="w-1/4 h-28 bg-red-300">ddd</div>
-                                <div class="w-1/4 h-28 bg-red-300">ddd</div>
-                                        <div class="w-1/4 h-28 bg-red-300">ddd</div>
-                                                <div class="w-1/4 h-28 bg-red-300">ddd</div>
-                                                        <div class="w-1/4 h-28 bg-red-300">ddd</div>
-                                                                <div class="w-1/4 h-28 bg-red-300">ddd</div>
-                                                                        <div class="w-1/4 h-28 bg-red-300">ddd</div>
-                                                                                <div class="w-1/4 h-28 bg-red-300">ddd</div>
-                <div class="w-1/4 h-28 bg-red-300">ss</div>
-                        <div class="w-1/4 h-28 bg-red-300">aa</div>
-                                <div class="w-1/4 h-28 bg-red-300">vv</div>
-                                        <div class="w-1/4 h-28 bg-red-300">ww</div>
-                                                <div class="w-1/4 h-28 bg-red-300">tt</div>
-                                                        <div class="w-1/4 h-28 bg-red-300">qq</div>
-                                                                <div class="w-1/4 h-28 bg-red-300">ll</div>
-                                                                        <div class="w-1/4 h-28 bg-red-300">jj</div>
-      </div>
       <!-- Filter Items -->
       <div class="w-full flex flex-col pt-9! lg:flex-row lg:justify-between! lg:gap-x-10!">
         <div class="hidden border-none! border-[#E4CFC6]! rounded-lg lg:flex lg:w-1/4! lg:h-fit!">
@@ -543,102 +525,187 @@
             </div>
 
           </div>
-          <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-4">
-            <div class="bg-white p-4 mt-4 shadow-lg rounded-lg">
-              <div class="flex flex-row justify-between gap-x-4">
-                <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
-                <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
+          <!-- Updated Card -->
+          <div class="grid grid-cols-1 gap-x-4! lg:grid-cols-2! ">
+            <div class="bg-white p-4! mt-4 rounded-lg shadow-[0_0_10px_rgba(0,0,0,0.1)] transition-shadow duration-300 hover:shadow-[0_0_20px_rgba(0,0,0,0.2)]"
+            >
+              <div class="grid grid-cols-2 gap-x-4">
+                <div>
+                  <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-full h-33!" />
+                  <p class="text-center text-[#3E3735]!">before</p>
+                </div>
+                <div>
+                  <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-full h-33!" />
+                  <p class="text-center text-[#3E3735]!">after</p>
+                </div>
               </div>
-              <div class="flex flex-col mt-3 gap-y-1">
-                <h5 class="font-semibold text-[22px]!">Skin Booster</h5>
-                <p>
-                  Women treated skin booster injection for face wrinke
-                </p>
-                <p class="text-[#524B46] text-[14px]!">30/10/2023</p>
-                <div class="flex flex-row gap-x-4">
-                  <span class="font-bold">30/10/2023</span>
-                  <span>|</span>
-                  <span>30 mins</span>
+              <div
+              class="w-full mt-3 gap-y-1"
+              >
+              <h5 class="font-semibold text-[22px]!">Skin Booster</h5>
+            </div>
+              <div class="grid grid-cols-3">
+                <div class="flex gap-x-1">
+                  <img src="./website_doctors_list/static/icons/gender.svg" alt="Gender icon" class="w-5.5! h-5.5! mt-3" />
+                  <span class="text-[#3E3735] text-[14px]! mt-3 ml-2">women</span>
+                </div>
+                            <div class="flex gap-x-1">
+                  <img src="./website_doctors_list/static/icons/birthday.svg" alt="birthday icon" class="w-5.5! h-5.5! mt-3" />
+                  <span class="text-[#3E3735] text-[14px]! mt-3 ml-2">24-35</span>
+                </div>
+                            <div class="flex gap-x-1">
+                  <img src="./website_doctors_list/static/icons/calendar.svg" alt="calendar icon" class="w-5.5! h-5.5! mt-3" />
+                  <span class="text-[#3E3735] text-[14px]! mt-3 ml-2">12/08/2023</span>
                 </div>
               </div>
             </div>
-            <div class="bg-white p-4 mt-4 shadow-lg rounded-lg">
-              <div class="flex flex-row justify-between gap-x-4">
-                <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
-                <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
+                      <div class="bg-white p-4! mt-4 rounded-lg shadow-[0_0_10px_rgba(0,0,0,0.1)] transition-shadow duration-300 hover:shadow-[0_0_20px_rgba(0,0,0,0.2)]"
+            >
+              <div class="grid grid-cols-2 gap-x-4">
+                <div>
+                  <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-full h-33!" />
+                  <p class="text-center text-[#3E3735]!">before</p>
+                </div>
+                <div>
+                  <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-full h-33!" />
+                  <p class="text-center text-[#3E3735]!">after</p>
+                </div>
               </div>
-              <div class="flex flex-col mt-3 gap-y-1">
-                <h5 class="font-semibold text-[22px]!">Skin Booster</h5>
-                <p>
-                  Women treated skin booster injection for face wrinke
-                </p>
-                <p class="text-[#524B46] text-[14px]!">30/10/2023</p>
-                <div class="flex flex-row gap-x-4">
-                  <span class="font-bold">30/10/2023</span>
-                  <span>|</span>
-                  <span>30 mins</span>
+              <div
+              class="w-full mt-3 gap-y-1"
+              >
+              <h5 class="font-semibold text-[22px]!">Skin Booster</h5>
+            </div>
+              <div class="grid grid-cols-3">
+                <div class="flex gap-x-1">
+                  <img src="./website_doctors_list/static/icons/gender.svg" alt="Gender icon" class="w-5.5! h-5.5! mt-3" />
+                  <span class="text-[#3E3735] text-[14px]! mt-3 ml-2">women</span>
+                </div>
+                            <div class="flex gap-x-1">
+                  <img src="./website_doctors_list/static/icons/birthday.svg" alt="birthday icon" class="w-5.5! h-5.5! mt-3" />
+                  <span class="text-[#3E3735] text-[14px]! mt-3 ml-2">24-35</span>
+                </div>
+                            <div class="flex gap-x-1">
+                  <img src="./website_doctors_list/static/icons/calendar.svg" alt="calendar icon" class="w-5.5! h-5.5! mt-3" />
+                  <span class="text-[#3E3735] text-[14px]! mt-3 ml-2">12/08/2023</span>
                 </div>
               </div>
             </div>
-            <div class="bg-white p-4 mt-4 shadow-lg rounded-lg">
-              <div class="flex flex-row justify-between gap-x-4">
-                <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
-                <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
-              </div>
-              <div class="flex flex-col mt-3 gap-y-1">
-                <h5 class="font-semibold text-[22px]!">Skin Booster</h5>
-                <p>
-                  Women treated skin booster injection for face wrinke
-                </p>
-                <p class="text-[#524B46] text-[14px]!">30/10/2023</p>
-                <div class="flex flex-row gap-x-4">
-                  <span class="font-bold">30/10/2023</span>
-                  <span>|</span>
-                  <span>30 mins</span>
+                      <div class="bg-white p-4! mt-4 rounded-lg shadow-[0_0_10px_rgba(0,0,0,0.1)] transition-shadow duration-300 hover:shadow-[0_0_20px_rgba(0,0,0,0.2)]"
+            >
+              <div class="grid grid-cols-2 gap-x-4">
+                <div>
+                  <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-full h-33!" />
+                  <p class="text-center text-[#3E3735]!">before</p>
+                </div>
+                <div>
+                  <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-full h-33!" />
+                  <p class="text-center text-[#3E3735]!">after</p>
                 </div>
               </div>
+              <div
+              class="w-full mt-3 gap-y-1"
+              >
+              <h5 class="font-semibold text-[22px]!">Skin Booster</h5>
             </div>
-            <div class="bg-white p-4 mt-4 shadow-lg rounded-lg">
-              <div class="flex flex-row justify-between gap-x-4">
-                <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
-                <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
-              </div>
-              <div class="flex flex-col mt-3 gap-y-1">
-                <h5 class="font-semibold text-[22px]!">Skin Booster</h5>
-                <p>
-                  Women treated skin booster injection for face wrinke
-                </p>
-                <p class="text-[#524B46] text-[14px]!">30/10/2023</p>
-                <div class="flex flex-row gap-x-4">
-                  <span class="font-bold">30/10/2023</span>
-                  <span>|</span>
-                  <span>30 mins</span>
+              <div class="grid grid-cols-3">
+                <div class="flex gap-x-1">
+                  <img src="./website_doctors_list/static/icons/gender.svg" alt="Gender icon" class="w-5.5! h-5.5! mt-3" />
+                  <span class="text-[#3E3735] text-[14px]! mt-3 ml-2">women</span>
                 </div>
-              </div>
-            </div>
-            <div class="bg-white p-4 mt-4 shadow-lg rounded-lg">
-              <div class="flex flex-row justify-between gap-x-4">
-                <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
-                <img src="./website_doctors_list/static/images/doctor-profile.png" class="w-1/2! h-33!" />
-              </div>
-              <div class="flex flex-col mt-3 gap-y-1">
-                <h5 class="font-semibold text-[22px]!">Skin Booster</h5>
-                <p>
-                  Women treated skin booster injection for face wrinke
-                </p>
-                <p class="text-[#524B46] text-[14px]!">30/10/2023</p>
-                <div class="flex flex-row gap-x-4">
-                  <span class="font-bold">30/10/2023</span>
-                  <span>|</span>
-                  <span>30 mins</span>
+                            <div class="flex gap-x-1">
+                  <img src="./website_doctors_list/static/icons/birthday.svg" alt="birthday icon" class="w-5.5! h-5.5! mt-3" />
+                  <span class="text-[#3E3735] text-[14px]! mt-3 ml-2">24-35</span>
+                </div>
+                            <div class="flex gap-x-1">
+                  <img src="./website_doctors_list/static/icons/calendar.svg" alt="calendar icon" class="w-5.5! h-5.5! mt-3" />
+                  <span class="text-[#3E3735] text-[14px]! mt-3 ml-2">12/08/2023</span>
                 </div>
               </div>
             </div>
           </div>
+          
         </div>
 
       </div>
     </div>
+
+               <!-- Up to 2 cards -->
+
+                <article
+                  class="shrink-0 w-[300px]! lg:w-[409.5px]!
+                         bg-white rounded-[8px]!  
+                        p-4! mt-4 rounded-lg shadow-[0_0_10px_rgba(0,0,0,0.1)] transition-shadow duration-300 hover:shadow-[0_0_20px_rgba(0,0,0,0.2)]
+                         
+                         flex flex-col h-[330px]! lg:h-[310.75px]!">
+    
+                  <!-- BEFORE / AFTER IMAGES -->
+                  <div class="flex justify-between gap-x-4">
+                    <!-- BEFORE -->
+                    <div class="w-1/2 h-[150px] lg:h-[180px] bg-[#E6E3DF] rounded-[8px]! overflow-hidden flex items-center justify-center">
+                      <img t-att-src="'/web/image/procedures.before.after.photo/%s/before_image' % after.id"
+                           alt="before"
+                           class="w-full h-[178.75px]! object-cover" />
+                    </div>
+    
+                    <!-- AFTER -->
+                    <div class="w-1/2 h-[150px] lg:h-[180px]! bg-[#E6E3DF] rounded-[8px]! overflow-hidden flex items-center justify-center">
+                      <img t-att-src="'/web/image/procedures.before.after.photo/%s/after_image' % after.id"
+                           alt="after"
+                           class="w-full h-[178.75px]! object-cover" />
+                    </div>
+                  </div>
+    
+                  <!-- before / after labels -->
+                  <div class="flex justify-between mt-2 text-[14px]! text-[#3E3735]!">
+                    <span class="w-1/2 text-center">before</span>
+                    <span class="w-1/2 text-center">after</span>
+                  </div>
+
+                   <!-- META ROW (gender / age / date) – anchored at bottom -->
+                  <div class="mt-2! pb-1!  flex items-center gap-x-5 text-[13px]! lg:text-[20px]! text-[#3E3735]!">
+    
+                    <!-- gender -->
+                    <div class="flex items-center gap-1.5">
+                      <img src="/website_doctors_list/static/icons/gender.png"
+                           alt="gender"
+                           class="w-4 h-4" />
+                      <span>
+                        Women
+                      </span>
+                    </div>
+    
+                    <!-- age -->
+                    <div class="flex items-center gap-1.5">
+                      <img src="/website_doctors_list/static/icons/age.png"
+                           alt="age"
+                           class="w-4 h-4" />
+                      <span>
+                        <t t-esc="after.age_range"/>
+                      </span>
+                    </div>
+    
+                    <!-- date -->
+                    <t t-if="after.date">
+                      <div class="flex items-center gap-1.5">
+                        <img src="/website_doctors_list/static/icons/calendar.png"
+                             alt="date"
+                             class="w-4 h-4" />
+                        <span><t t-esc="after.date"/></span>
+                      </div>
+                    </t>
+                  </div>
+
+                    
+                  <!-- TITLE (2 lines max, same height for all cards) -->
+                  <div class="mt-2 min-h-[40px]">
+                    <p class="text-[16px]! lg:text-[18px]! font-extrabold! text-[#3E3735]! leading-snug"
+                       style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">
+                      <t t-esc="after.product_tmpl_id.name or after.name"/>
+                    </p>
+                  </div>
+    
+                </article>
   </div>
 
   <script>
